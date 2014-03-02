@@ -84,3 +84,5 @@ imap hh <C-y>,
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <right> <nop>
+" NerdTree
+:nmap <Leader>e :NERDTreeToggle<CR>
