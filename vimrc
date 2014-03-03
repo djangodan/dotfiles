@@ -56,10 +56,10 @@ au BufRead,BufNewFile *.txt,*.tex set wrap linebreak nolist textwidth=0 wrapmarg
 " Leader mapping
 let mapleader=","
 " Autoreload
-:nmap <Leader>s :source $MYVIMRC
+:nmap <Leader>sv :source $MYVIMRC
 :nmap <Leader>v :e $MYVIMRC
 " Hide hlsearch
-:nnoremap <Esc> :set hlsearch!<CR>
+:nnoremap <C-]> :set hlsearch!<CR>
 " Show/hide tabs
 :nmap <C-A> :set list!<CR>
 " Better splits
@@ -83,6 +83,7 @@ imap hh <C-y>,
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <right> <nop>
+nnoremap <left> <nop>
 " NerdTree
 :nmap <Leader>e :NERDTreeToggle<CR>
 " Toggle linenumbers
