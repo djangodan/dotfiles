@@ -1,4 +1,5 @@
 call pathogen#infect()
+
 "  Wrap gitcommit file types at the appropriate length "
 filetype indent plugin on
 
@@ -16,7 +17,7 @@ set hlsearch!
 set background=dark
 " Set color scheme
 colorscheme Tomorrow-Night
-set lazyredraw
+" set lazyredraw
 set t_Co=256
 " Set smartindent on
 set smartindent 
@@ -45,8 +46,10 @@ set title
 set nobackup
 set noswapfile
 " Show tabs
-set listchars=tab:--
-set list!
+" set listchars=tab:--
+" set list!
+" Remap for emmet
+let g:user_emmet_leader_key='<C-d>'
 
 " Latex word wraps
 au BufRead,BufNewFile *.txt,*.tex set wrap linebreak nolist textwidth=0 wrapmargin=0
@@ -68,7 +71,7 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-L> <C-W><C-L>
 " Better emmet
-imap hh <C-y>,
+" imap hh <C-y>,
 " ctrl [ as esc
 :imap <C-[> <Esc>
 " Better navigation

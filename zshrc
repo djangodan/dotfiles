@@ -87,7 +87,7 @@ function mkns(){
 	git aa;
 	git commit -am 'Initial commit'
 	git nb 'dev';
-	$2 .;
+	sublime .;
 }
 
 # Navigate to and open dissertation files
