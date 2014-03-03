@@ -69,7 +69,8 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # My settings
 # tmux
-alias tmux="tmux -2" 
+alias tm a="tmux attach -t"
+alias tm d="tmux detach"
 # Move to Github folder
 function github() { cd ~/Dropbox/GitHub\ repos/ ;}
 
@@ -96,5 +97,6 @@ function wordcount() { perl texcount.pl chapters/*.tex ; }
 
 # Navigate to Sublime git repo
 function gitsublime() { cd /Users/wilson/Library/Application\ Support/Sublime\ Text\ 3 ;}
+
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
