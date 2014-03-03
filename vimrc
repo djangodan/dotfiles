@@ -21,7 +21,7 @@ set t_Co=256
 " Set smartindent on
 set smartindent 
 " Show line numbers
-set relativenumber
+" set relativenumber
 set number
 " Set incremental searching
 set incsearch
