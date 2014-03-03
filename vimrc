@@ -21,6 +21,7 @@ set t_Co=256
 " Set smartindent on
 set smartindent 
 " Show line numbers
+set relativenumber
 set number
 " Set incremental searching
 set incsearch
@@ -43,8 +44,6 @@ set title
 "no swp/backup
 set nobackup
 set noswapfile
-" Use the OS clipbard
-set clipboard=unnamed
 " Show tabs
 set listchars=tab:--
 set list!
@@ -86,3 +85,5 @@ nnoremap <down> <nop>
 nnoremap <right> <nop>
 " NerdTree
 :nmap <Leader>e :NERDTreeToggle<CR>
+" Toggle linenumbers
+nnoremap <Leader>l :set relativenumber!<CR>
