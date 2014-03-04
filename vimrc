@@ -17,7 +17,7 @@ set hlsearch!
 set background=dark
 " Set color scheme
 colorscheme Tomorrow-Night
-" set lazyredraw
+set lazyredraw
 set t_Co=256
 " Set smartindent on
 set smartindent 
