@@ -69,8 +69,10 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # My settings
 # tmux
-alias tm a="tmux attach -t"
-alias tm d="tmux detach"
+alias tma="tmux attach -t"
+alias tmd="tmux detach"
+alias tmk='tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-session -t {}'
+
 # Move to Github folder
 function github() { cd ~/Dropbox/GitHub\ repos/ ;}
 
