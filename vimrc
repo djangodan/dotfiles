@@ -91,3 +91,5 @@ nnoremap <left> <nop>
 :nmap <Leader>e :NERDTreeToggle<CR>
 " Toggle linenumbers
 nnoremap <Leader>l :set relativenumber!<CR>
+" Close buffer
+nmap <Leader>w :bd<CR>
