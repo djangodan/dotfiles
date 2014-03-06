@@ -71,6 +71,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # tmux
 alias tma="tmux attach -t"
 alias tmd="tmux detach"
+alias tml="tmux ls"
 alias tmk='tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-session -t {}'
 
 # Move to Github folder
