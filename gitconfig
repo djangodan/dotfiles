@@ -76,6 +76,7 @@
 
   # merge
   md = merge dev                    # merge dev
+	# md = checkout master && git merge dev
 
   # stash
   ss = stash                        # stash changes
