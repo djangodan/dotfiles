@@ -74,6 +74,9 @@ alias tmd="tmux detach"
 alias tml="tmux ls"
 alias tmk='tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-session -t {}'
 
+# clear aliase
+alias clear="clear && ls"
+
 # Move to Github folder
 function github() { cd ~/Dropbox/GitHub\ repos/ ;}
 
