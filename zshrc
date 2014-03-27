@@ -77,6 +77,8 @@ alias tmk='tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-sess
 # clear aliase
 alias clear="clear && ls"
 
+# Easy heroku
+function gph() { rake assets:precompile ; git aa ; git c 'Precompile for heroku push' ; git ps ; git ph ; }
 # Move to Github folder
 function github() { cd ~/Dropbox/GitHub\ repos/ ;}
 
