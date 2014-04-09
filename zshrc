@@ -49,21 +49,6 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
@@ -73,19 +58,20 @@ alias tma="tmux attach -t"
 alias tmd="tmux detach"
 alias tml="tmux ls"
 alias tmk='tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-session -t {}'
-alias py="python"
 
-# clear aliase
-alias clear="clear && ls"
+# Better alias
+alias py="python"
 
 # Easy heroku
 function gph() { rake assets:precompile ; git aa ; git c 'Precompile for heroku push' ; git ps ; git ph ; }
+
 # Move to Github folder
 function github() { cd ~/Dropbox/GitHub\ repos/ ;}
 
 # Move boilerplate files
 function newsite() { cp ~/Dropbox/GitHub\ repos/gruntfile/Gruntfile.js . ; cp ~/Dropbox/GitHub\ repos/gruntfile/package.json . ; mkdir js sass ; touch README.md index.html js/main.js sass/style.scss ;}
 
+# Make new site function
 function mkns(){
 	mkdir $1;
 	cd $1;
@@ -106,6 +92,5 @@ function wordcount() { perl texcount.pl chapters/*.tex ; }
 
 # Navigate to Sublime git repo
 function gitsublime() { cd /Users/wilson/Library/Application\ Support/Sublime\ Text\ 3 ;}
-
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
