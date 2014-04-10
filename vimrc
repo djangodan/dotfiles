@@ -5,8 +5,6 @@ filetype indent plugin on
 
 " Syntax highlightins
 syntax on
-" Set tabspace
-set tabstop=2
 " Set ruler (bottom right)
 set ruler
 " Ignore case on search
@@ -20,17 +18,18 @@ colorscheme Tomorrow-Night
 set lazyredraw
 set t_Co=256
 " Set smartindent on
-set smartindent 
+set smartindent
 " Show line numbers
 " set relativenumber
 set number
 " Set incremental searching
 set incsearch
-" Set smart tab
-set smarttab
 " Tab settings
+set smarttab
 set shiftwidth=2
 set tabstop=2
+set softtabstop=2
+set expandtab
 " Scroll off
 set scrolloff=10
 " Set word wrap on
@@ -79,7 +78,7 @@ nnoremap <C-L> <C-W><C-L>
 " Better navigation
 :nmap j gj
 :nmap k gk
-" \q as no highlight search 
+" \q as no highlight search
 :nmap \q :nohlsearch<CR>
 " buffer navigation - ctrl n/p
 :nmap <Leader>x :bnext<CR>
