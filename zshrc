@@ -6,6 +6,7 @@ ZSH=$HOME/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="terminalparty"
+#ZSH_THEME="robbyrussell"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -54,10 +55,10 @@ source $ZSH/oh-my-zsh.sh
 
 # My settings
 # tmux
-alias tma="tmux attach -t"
-alias tmd="tmux detach"
-alias tml="tmux ls"
-alias tmk='tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-session -t {}'
+#alias tma="tmux attach -t"
+#alias tmd="tmux detach"
+#alias tml="tmux ls"
+#alias tmk='tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-session -t {}'
 
 # Better alias
 alias py="python"
