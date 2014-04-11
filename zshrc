@@ -85,6 +85,19 @@ function mkns(){
 	sublime .;
 }
 
+# New vagrant install
+function newvag(){
+	git clone https://github.com/chad-thompson/vagrantpress.git;
+	mv vagrantpress $1;
+	cd $1;
+	vagrant up;
+	cd wordpress/wp-content/themes;
+	mkdir $1;
+	cd $1;
+	git init;
+	sublime .;
+}
+
 # Navigate to and open dissertation files
 function dissertation() { cd ~/Dropbox/University/Year\ 3/Project/Daniel\ Wilson/Dissertation/ ; open dissertation.tex bib.bib chapters/*.tex ;}
 # Wordcount
