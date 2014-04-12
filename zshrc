@@ -62,6 +62,9 @@ alias tmk='tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-sess
 # Better alias
 alias py="python"
 
+# dotfiles
+alias gitdot="cd ~/dotfiles"
+
 # Easy heroku
 function gph() { rake assets:precompile ; git aa ; git c 'Precompile for heroku push' ; git ps ; git ph ; }
 
@@ -86,10 +89,22 @@ function mkns(){
 }
 
 # New vagrant install
-function newvag(){
+function clonevag(){
 	git clone https://github.com/chad-thompson/vagrantpress.git;
 	mv vagrantpress $1;
 	cd $1;
+	vagrant up;
+	cd wordpress/wp-content/themes;
+	mkdir $1;
+	cd $1;
+	git init;
+	sublime .;
+}
+
+function newvag(){
+	cp -r ~/Dropbox/GitHub\ repos/vagrantpress $1;
+	cd $1;
+	rm -rf .git;
 	vagrant up;
 	cd wordpress/wp-content/themes;
 	mkdir $1;
