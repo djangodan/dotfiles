@@ -59,8 +59,11 @@ alias tmd="tmux detach"
 alias tml="tmux ls"
 alias tmk='tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-session -t {}'
 
-# Better alias
+# python stuffs
 alias py="python"
+alias newvenv="virtualenv venv"
+alias actvenv="source venv/bin/activate"
+alias deact="deactivate"
 
 # dotfiles
 alias gitdot="cd ~/dotfiles"
