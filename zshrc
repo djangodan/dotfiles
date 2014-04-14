@@ -70,9 +70,6 @@ alias deact="deactivate"
 alias gitdot="cd ~/dotfiles"
 alias subdot="sublime ~/dotfiles"
 
-# RPi
-alias rpi = "arp -a | grep b8:27:eb | grep -Eo '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}'"
-
 # Easy heroku
 function gph() { rake assets:precompile ; git aa ; git c 'Precompile for heroku push' ; git ps ; git ph ; }
 
