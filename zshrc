@@ -63,8 +63,8 @@ alias tmk='tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-sess
 alias py="python"
 alias py2="python2"
 alias newvenv="virtualenv venv"
-alias actvenv="source venv/bin/activate"
-alias deact="deactivate"
+alias actv="source venv/bin/activate"
+alias deactv="deactivate"
 
 # Rpi alias
 alias pacin="sudo pacman -S"
