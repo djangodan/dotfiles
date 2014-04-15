@@ -65,6 +65,9 @@ alias newvenv="virtualenv venv"
 alias actvenv="source venv/bin/activate"
 alias deact="deactivate"
 
+# Rpi alias
+alias pacman = "sudo pacman"
+
 # dotfiles
 alias gitdot="cd ~/dotfiles"
 alias subdot="sublime ~/dotfiles"
