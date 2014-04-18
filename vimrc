@@ -2,7 +2,6 @@ call pathogen#infect()
 
 "  Wrap gitcommit file types at the appropriate length "
 filetype indent plugin on
-
 " Syntax highlightins
 syntax on
 " Set ruler (bottom right)
@@ -49,8 +48,8 @@ set noswapfile
 " set list!
 " Remap for emmet
 let g:user_emmet_leader_key='<C-d>'
-" vim note directory
-:let g:notes_directories = ['~/Dropbox/vimnotes']
+
+au FileType python setl sw=2 sts=2 et
 
 " Latex word wraps
 au BufRead,BufNewFile *.txt,*.tex set wrap linebreak nolist textwidth=0 wrapmargin=0

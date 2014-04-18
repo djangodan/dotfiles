@@ -1,5 +1,5 @@
 #!/bin/bash
-############################ 
+############################
 # This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
 ############################
 
@@ -7,7 +7,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bash_profile bashrc gitconfig profile vim vimrc zshrc"    # list of files/folders to symlink in homedir
+files="bash_profile bashrc gitconfig profile vim vimrc zshrc tmux.conf"    # list of files/folders to symlink in homedir
 
 ##########
 

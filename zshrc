@@ -60,8 +60,30 @@ source $ZSH/oh-my-zsh.sh
 #alias tml="tmux ls"
 #alias tmk='tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-session -t {}'
 
-# Better alias
+set_terminal_tab_title() {
+  print -Pn "\e]1;$1:q\a"
+}
+
+indicate_tmux_session_in_terminal() {
+  set_terminal_tab_title "$(tmux display-message -p '#S')"
+}
+
+precmd_functions=($precmd_functions indicate_tmux_session_in_terminal)
+
+# python stuffs
 alias py="python"
+alias py2="python2"
+alias newvenv="virtualenv venv"
+alias actv="source venv/bin/activate"
+alias deactv="deactivate"
+
+# Rpi alias
+alias pacin="sudo pacman -S"
+alias pacser="sudo pacman -Ss"
+
+# dotfiles
+alias gitdot="cd ~/dotfiles"
+alias subdot="sublime ~/dotfiles"
 
 # Easy heroku
 function gph() { rake assets:precompile ; git aa ; git c 'Precompile for heroku push' ; git ps ; git ph ; }
@@ -87,10 +109,22 @@ function mkns(){
 }
 
 # New vagrant install
-function newvag(){
+function clonevag(){
 	git clone https://github.com/chad-thompson/vagrantpress.git;
 	mv vagrantpress $1;
 	cd $1;
+	vagrant up;
+	cd wordpress/wp-content/themes;
+	mkdir $1;
+	cd $1;
+	git init;
+	sublime .;
+}
+
+function newvag(){
+	cp -r ~/Dropbox/GitHub\ repos/vagrantpress $1;
+	cd $1;
+	rm -rf .git;
 	vagrant up;
 	cd wordpress/wp-content/themes;
 	mkdir $1;
