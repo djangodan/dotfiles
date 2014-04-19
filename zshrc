@@ -55,7 +55,6 @@ source $ZSH/oh-my-zsh.sh
 # My settings
 
 # VPS pull and build
-
 function danwilson() { git pull ; jekyll build ; cp ../keybase.txt _site ; }
 
 # tmux
@@ -89,52 +88,52 @@ alias pacser="sudo pacman -Ss"
 alias gitdot="cd ~/dotfiles"
 alias subdot="sublime ~/dotfiles"
 
+# github local repos
+alias github="cd ~/Dropbox/GitHub\ repos/"
+
 # Easy heroku
 function gph() { rake assets:precompile ; git aa ; git c 'Precompile for heroku push' ; git ps ; git ph ; }
 
-# Move to Github folder
-function github() { cd ~/Dropbox/GitHub\ repos/ ;}
+# Make boilerplate files
+function sitedir() { mkdir js images; touch index.html js/main.js ;}
 
-# Move boilerplate files
-function newsite() { cp ~/Dropbox/GitHub\ repos/gruntfile/Gruntfile.js . ; cp ~/Dropbox/GitHub\ repos/gruntfile/package.json . ; mkdir js sass ; touch README.md index.html js/main.js sass/style.scss ;}
+# Get base sass files
+function getbase() {
+  git clone http://github.com/wilsonand1/base.git . ;
+  rm -rf README.md .git ;
+}
 
 # Make new site function
-function mkns(){
-	mkdir $1;
-	cd $1;
-	newsite;
-	echo "# $1" > README.md;
-	echo $(date +%d.%m.%y-%H:%M:%S) >> README.md;
-	git init;
-	git aa;
-	git commit -am 'Initial commit'
-	git nb 'dev';
-	sublime .;
+function newsite(){
+  mkdir $1;
+  cd $1;
+  getbase;
+  sitedir;
+  touch README.md;
+  echo "# $1" > README.md;
+  echo $(date +%d.%m.%y-%H:%M:%S) >> README.md;
+  git init;
+  git aa;
+  git commit -am 'Initial commit'
+  git nb 'dev';
+  sublime .;
 }
 
 # New vagrant install
 function clonevag(){
-	git clone https://github.com/chad-thompson/vagrantpress.git;
-	mv vagrantpress $1;
-	cd $1;
-	vagrant up;
-	cd wordpress/wp-content/themes;
-	mkdir $1;
-	cd $1;
-	git init;
-	sublime .;
-}
-
-function newvag(){
-	cp -r ~/Dropbox/GitHub\ repos/vagrantpress $1;
-	cd $1;
-	rm -rf .git;
-	vagrant up;
-	cd wordpress/wp-content/themes;
-	mkdir $1;
-	cd $1;
-	git init;
-	sublime .;
+  git clone https://github.com/chad-thompson/vagrantpress.git;
+  mv vagrantpress $1;
+  cd $1;
+  rm -rf .git;
+  git init;
+  touch README.md;
+  echo "# $1" > README.md;
+  echo $(date +%d.%m.%y-%H:%M:%S) >> README.md;
+  vagrant up;
+  cd wordpress/wp-content/themes;
+  mkdir $1;
+  cd $1;
+  sublime .;
 }
 
 # Navigate to and open dissertation files
