@@ -53,6 +53,11 @@ source $ZSH/oh-my-zsh.sh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # My settings
+
+# VPS pull and build
+
+function danwilson() { git pull ; jekyll build ; cp ../keybase.txt _site ; }
+
 # tmux
 alias tma="tmux attach -t"
 alias tmd="tmux detach"
