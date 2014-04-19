@@ -78,7 +78,7 @@ alias deactv="deactivate"
 
 # Rpi alias
 alias pacin="sudo pacman -S"
-alias pacser="sudo pacman -Ss"
+alias pacser="pacman -Ss"
 
 # dotfiles
 alias gitdot="cd ~/dotfiles"
