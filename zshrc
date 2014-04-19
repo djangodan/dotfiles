@@ -100,7 +100,7 @@ function sitedir() { mkdir js images; touch index.html js/main.js ;}
 # Get base sass files
 function getbase() {
   git clone http://github.com/wilsonand1/base.git . ;
-  rm -rf README.md .git ;
+  rm -rf README.md .git .gitignore;
 }
 
 # Make new site function
