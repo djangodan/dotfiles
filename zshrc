@@ -91,6 +91,9 @@ alias subdot="sublime ~/dotfiles"
 # github local repos
 alias github="cd ~/Dropbox/GitHub\ repos/"
 
+# Ezpz
+alias c="clear"
+
 # Easy heroku
 function gph() { rake assets:precompile ; git aa ; git c 'Precompile for heroku push' ; git ps ; git ph ; }
 
