@@ -63,16 +63,6 @@ alias tmd="tmux detach"
 alias tml="tmux ls"
 alias tmk='tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-session -t {}'
 
-set_terminal_tab_title() {
-  print -Pn "\e]1;$1:q\a"
-}
-
-indicate_tmux_session_in_terminal() {
-  set_terminal_tab_title "$(tmux display-message -p '#S')"
-}
-
-precmd_functions=($precmd_functions indicate_tmux_session_in_terminal)
-
 # python stuffs
 alias py="python"
 alias py2="python2"
@@ -83,6 +73,8 @@ alias deactv="deactivate"
 # Rpi alias
 alias pacin="sudo pacman -S"
 alias pacser="pacman -Ss"
+alias aptin="sudo apt-get install"
+alias aptser="sduo apt-cache search"
 
 # dotfiles
 alias gitdot="cd ~/dotfiles"
