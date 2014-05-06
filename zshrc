@@ -85,6 +85,7 @@ alias github="cd ~/Dropbox/GitHub\ repos/"
 
 # Ezpz
 alias c="clear"
+alias purge="sudo purge"
 
 # Easy heroku
 function gph() { rake assets:precompile ; git aa ; git c 'Precompile for heroku push' ; git ps ; git ph ; }
