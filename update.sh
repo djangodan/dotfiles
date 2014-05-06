@@ -1,3 +1,5 @@
+#!/bin/bash
+
 pacman -Sy pacman
 pacman-key --init
 pacman -S archlinux-keyring
