@@ -19,12 +19,15 @@ set softtabstop=2
 set expandtab
 set scrolloff=10
 set wrap
+set linebreak
+set nolist
 set backspace=2
 set backspace=indent,eol,start
 set laststatus=2
 set title
 set nobackup
 set noswapfile
+set hidden
 
 au FileType python setl sw=2 sts=2 et
 
