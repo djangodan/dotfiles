@@ -33,7 +33,6 @@ au FileType python setl sw=2 sts=2 et
 
 " Keymaps
 let mapleader=","
-let g:user_emmet_leader_key='<C-d>'
 :nmap <Leader>sv :source $MYVIMRC
 :nmap <Leader>v :e $MYVIMRC
 :nnoremap <C-]> :set hlsearch!<CR>
