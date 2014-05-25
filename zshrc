@@ -57,6 +57,8 @@ source $ZSH/oh-my-zsh.sh
 # VPS pull and build
 function danwilson() { git pull ; jekyll build ; cp ../keybase.txt _site ; }
 
+# bower
+alias bower = 'noglob bower'
 # tmux
 alias tma="tmux attach -t"
 alias tmd="tmux detach"
