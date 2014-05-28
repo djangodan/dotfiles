@@ -54,6 +54,9 @@ source $ZSH/oh-my-zsh.sh
 
 # My settings
 
+# new project
+function newproj() { mkdir $1 ; cd $1 ; mkdir build ; }
+
 # VPS pull and build
 function danwilson() { git pull ; jekyll build ; cp ../keybase.txt _site ; }
 
