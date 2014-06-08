@@ -84,13 +84,16 @@
   sa = stash apply                  # apply stash (restore changes)
   sd = stash drop                   # drop stashes (destory changes)
 
-  # status
-  s = status                        # status
-  st = status                       # status
-  stat = status                     # status
+  # status -sb
+  s = status -sb                        # status -sb
+  st = status -sb                      # status -sb
+  stat = status -sb                    # status -sb
 
   # tag
   t = tag -n                        # show tags with <n> lines of each tag message
+
+  # fuckit
+  fuckit = reset --hard head
 
   # svn helpers
   svnr = svn rebase
