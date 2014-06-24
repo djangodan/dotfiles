@@ -28,6 +28,8 @@ set title
 set nobackup
 set noswapfile
 set hidden
+set showcmd
+set cursorline
 
 au FileType python setl sw=2 sts=2 et
 

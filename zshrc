@@ -60,6 +60,9 @@ function newproj() { mkdir $1 ; cd $1 ; mkdir build ; }
 # VPS pull and build
 function danwilson() { git pull ; jekyll build ; cp ../keybase.txt _site ; }
 
+
+alias bjl="cd ~/BJL"
+
 # bower
 alias bower="noglob bower"
 # tmux
