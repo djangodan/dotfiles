@@ -84,13 +84,16 @@
   sa = stash apply                  # apply stash (restore changes)
   sd = stash drop                   # drop stashes (destory changes)
 
-  # status
-  s = status                        # status
-  st = status                       # status
-  stat = status                     # status
+  # status -sb
+  s = status -sb                        # status -sb
+  st = status -sb                      # status -sb
+  stat = status -sb                    # status -sb
 
   # tag
   t = tag -n                        # show tags with <n> lines of each tag message
+
+  # fuckit
+  fuckit = reset --hard head
 
   # svn helpers
   svnr = svn rebase
@@ -119,7 +122,7 @@
 [core]
   autocrlf = false
   editor = vim
-  excludesfile = ~/.yadr/git/gitignore
+	excludesfile = /Users/wilson/.gitignore_global
 [advice]
   statusHints = false
 [diff]
@@ -138,3 +141,9 @@
 	name = Danny Wilson
 [credential]
 	helper = osxkeychain
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
