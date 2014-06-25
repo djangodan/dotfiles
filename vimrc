@@ -56,3 +56,4 @@ nnoremap <left> <nop>
 :nmap <Leader>e :NERDTreeToggle<CR>
 nnoremap <Leader>l :set relativenumber!<CR>
 nmap <Leader>w :bd<CR>
+:noremap <Leader>r :set nowrap! <CR>
