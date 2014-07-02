@@ -1,4 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/home/wilson/github/betbook'
 let g:netrw_dirhist_2='/Users/dannywilson/github/wilsonand1.github.io'
+let g:netrw_dirhist_3='/Users/dannywilson/BJL/ukar/0825547 - arenaonline/build'
+let g:netrw_dirhist_4='/Users/dannywilson/BJL/ukar/0825547 - arenaonline/build/puppet'
+let g:netrw_dirhist_5='/Users/dannywilson/BJL/ukar/0825547 - arenaonline/build/puppet/modules/qqarenaonline'
+let g:netrw_dirhist_6='/Users/dannywilson/BJL/ukar/0825547 - arenaonline/build/puppet/modules/phpqa'
+let g:netrw_dirhist_7='/Users/dannywilson/BJL/ukar/0825547 - arenaonline/build/puppet/modules'
+let g:netrw_dirhist_8='/Users/dannywilson/BJL/ukar/0825547 - arenaonline/build/puppet/modules/arenaonline'
+let g:netrw_dirhist_9='/Users/dannywilson/node/express/myapp'
