@@ -30,6 +30,7 @@ set noswapfile
 set hidden
 set showcmd
 set cursorline
+set showbreak=...
 
 au FileType python setl sw=2 sts=2 et
 
