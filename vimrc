@@ -58,3 +58,6 @@ nnoremap <left> <nop>
 nnoremap <Leader>l :set relativenumber!<CR>
 nmap <Leader>w :bd<CR>
 :noremap <Leader>r :set nowrap! <CR>
+
+" Vim go
+let g:go_disable_autoinstall = 1
