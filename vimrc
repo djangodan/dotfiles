@@ -61,3 +61,5 @@ nmap <Leader>w :bd<CR>
 
 " Vim go
 let g:go_disable_autoinstall = 1
+" Vim ctrlp ignor
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
