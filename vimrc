@@ -64,3 +64,14 @@ nmap <Leader>w :bd<CR>
 let g:go_disable_autoinstall = 1
 " Vim ctrlp ignor
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+
+
+function! GoyoBefore()
+  Limelight
+endfunction
+
+function! GoyoAfter()
+  Limelight!
+endfunction
+
+let g:goyo_callbacks = [function('GoyoBefore'), function('GoyoAfter')]
