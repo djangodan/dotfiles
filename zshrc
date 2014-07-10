@@ -61,7 +61,7 @@ source $ZSH/oh-my-zsh.sh
 function newproj() { mkdir $1 ; cd $1 ; mkdir build ; }
 
 # VPS pull and build
-function danwilson() { git pull ; jekyll build ; cp ../keybase.txt _site ; }
+function danwilson() { git pull ; jekyll build ; }
 
 
 alias bjl="cd ~/BJL"
