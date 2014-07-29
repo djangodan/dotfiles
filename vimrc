@@ -32,7 +32,6 @@ set showcmd
 set cursorline
 set breakindent
 set regexpengine=1
-set macmeta
 
 au FileType python setl sw=2 sts=2 et
 
