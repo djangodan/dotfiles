@@ -75,3 +75,5 @@ function! GoyoAfter()
 endfunction
 
 let g:goyo_callbacks = [function('GoyoBefore'), function('GoyoAfter')]
+let g:airline#extensions#tabline#enabled = 1
+command -nargs=+ Se execute 'vimgrep /' . [<f-args>][0] . '/ **/*.' . [<f-args>][1]
