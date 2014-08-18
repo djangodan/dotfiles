@@ -74,6 +74,9 @@ alias bower="noglob bower"
 #alias tml="tmux ls"
 #alias tmk='tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-session -t {}'
 
+
+alias vi="open -a vimr.app $*"
+
 # python stuffs
 alias py="python"
 alias py2="python2"
