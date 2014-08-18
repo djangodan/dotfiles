@@ -77,3 +77,14 @@ endfunction
 let g:goyo_callbacks = [function('GoyoBefore'), function('GoyoAfter')]
 let g:airline#extensions#tabline#enabled = 1
 command -nargs=+ Se execute 'vimgrep /' . [<f-args>][0] . '/ **/*.' . [<f-args>][1]
+
+
+"smart indent when entering insert mode with i on empty lines
+function! IndentWithI()
+if len(getline('.')) == 0
+return "\"_ddO"
+else
+return "i"
+endif
+endfunction
+nnoremap <expr> i IndentWithI()
