@@ -69,10 +69,10 @@ alias bjl="cd ~/BJL"
 # bower
 alias bower="noglob bower"
 # tmux
-#alias tma="tmux attach -t"
-#alias tmd="tmux detach"
-#alias tml="tmux ls"
-#alias tmk='tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-session -t {}'
+alias tma="tmux attach -t"
+alias tmd="tmux detach"
+alias tml="tmux ls"
+alias tmk='tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-session -t {}'
 
 
 alias vi="open -a vimr.app $*"
