@@ -88,3 +88,5 @@ return "i"
 endif
 endfunction
 nnoremap <expr> i IndentWithI()
+
+set shell=/bin/bash
