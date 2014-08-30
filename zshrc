@@ -57,13 +57,8 @@ source $ZSH/oh-my-zsh.sh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # My settings
-
-# new project
-function newproj() { mkdir $1 ; cd $1 ; mkdir build ; }
-
 # VPS pull and build
 function danwilson() { git pull ; jekyll build ; }
-
 
 alias bjl="cd ~/BJL"
 
@@ -74,7 +69,6 @@ alias tma="tmux attach -t"
 alias tmd="tmux detach"
 alias tml="tmux ls"
 alias tmk='tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-session -t {}'
-
 
 alias vi="open -a vimr.app $*"
 
@@ -96,7 +90,7 @@ alias gitdot="cd ~/dotfiles"
 alias subdot="sublime ~/dotfiles"
 
 # github local repos
-alias github="cd ~/Dropbox/GitHub\ repos/"
+alias github="cd ~/Dropbox/projects"
 
 # Ezpz
 alias c="clear"
@@ -105,52 +99,6 @@ alias purge="sudo purge"
 # Easy heroku
 function gph() { rake assets:precompile ; git aa ; git c 'Precompile for heroku push' ; git ps ; git ph ; }
 
-# Make boilerplate files
-function sitedir() { mkdir js images; touch index.html js/main.js ;}
-
-# Get base sass files
-function getbase() {
-  git clone http://github.com/wilsonand1/base.git . ;
-  rm -rf README.md .git;
-}
-
-# Make new site function
-function newsite(){
-  mkdir $1;
-  cd $1;
-  getbase;
-  sitedir;
-  touch README.md;
-  echo "# $1" > README.md;
-  echo $(date +%d.%m.%y-%H:%M:%S) >> README.md;
-  git init;
-  git aa;
-  git commit -am 'Initial commit'
-  git nb 'dev';
-  sublime .;
-}
-
-# New vagrant install
-function clonevag(){
-  git clone https://github.com/chad-thompson/vagrantpress.git;
-  mv vagrantpress $1;
-  cd $1;
-  rm -rf .git;
-  git init;
-  touch README.md;
-  echo "# $1" > README.md;
-  echo $(date +%d.%m.%y-%H:%M:%S) >> README.md;
-  vagrant up;
-  cd wordpress/wp-content/themes;
-  mkdir $1;
-  cd $1;
-  sublime .;
-}
-
-# Navigate to and open dissertation files
-function dissertation() { cd ~/Dropbox/University/Year\ 3/Project/Daniel\ Wilson/Dissertation/ ; open dissertation.tex bib.bib chapters/*.tex ;}
-# Wordcount
-function wordcount() { perl texcount.pl chapters/*.tex ; }
 
 # Navigate to Sublime git repo
 function gitsublime() { cd /Users/wilson/Library/Application\ Support/Sublime\ Text\ 3 ;}
