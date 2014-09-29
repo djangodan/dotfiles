@@ -1,6 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/Users/wilson/Dropbox/projects/splits_project/splits'
 let g:netrw_dirhist_2='/Users/wilson/Dropbox/projects/splits_project/splits/public'
-let g:netrw_dirhist_3='/Users/wilson/Dropbox/projects/splits_project/splits/public/stylesheets'
-let g:netrw_dirhist_4='/Users/wilson/Dropbox/projects/splits_project/splits/public/stylesheets/partials'
+let g:netrw_dirhist_3='/Users/wilson/Dropbox/projects/splits_project/splits/public/javascripts'
+let g:netrw_dirhist_4='/Users/wilson/Dropbox/projects/splits_project/splits/public/javascripts/components'
+let g:netrw_dirhist_5='/Users/wilson/Dropbox/projects/splits_project/splits'

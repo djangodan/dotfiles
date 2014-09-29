@@ -41,6 +41,7 @@ au FileType python setl sw=2 sts=2 et
 " Keymaps
 let mapleader=","
 :nnoremap <C-]> :set hlsearch!<CR>
+nmap <Leader>w :bd<CR>
 :nmap <C-A> :set list!<CR>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
