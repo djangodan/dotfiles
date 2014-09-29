@@ -37,8 +37,6 @@ au FileType python setl sw=2 sts=2 et
 
 " Keymaps
 let mapleader=","
-:nmap <Leader>sv :source $MYVIMRC
-:nmap <Leader>v :e $MYVIMRC
 :nnoremap <C-]> :set hlsearch!<CR>
 :nmap <C-A> :set list!<CR>
 nnoremap <C-J> <C-W><C-J>
@@ -55,26 +53,8 @@ nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <right> <nop>
 nnoremap <left> <nop>
-:nmap <Leader>e :NERDTreeToggle<CR>
-nnoremap <Leader>l :set relativenumber!<CR>
-nmap <Leader>w :bd<CR>
 :noremap <Leader>r :set nowrap! <CR>
 
-" Vim go
-let g:go_disable_autoinstall = 1
-" Vim ctrlp ignor
-let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-
-
-function! GoyoBefore()
-  Limelight
-endfunction
-
-function! GoyoAfter()
-  Limelight!
-endfunction
-
-let g:goyo_callbacks = [function('GoyoBefore'), function('GoyoAfter')]
 let g:airline#extensions#tabline#enabled = 1
 command -nargs=+ Se execute 'vimgrep /' . [<f-args>][0] . '/ **/*.' . [<f-args>][1]
 
