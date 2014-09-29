@@ -1,11 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/dannywilson/dotfiles/vim'
-let g:netrw_dirhist_2='/Users/wilson/dotfiles/vim'
-let g:netrw_dirhist_3='/Users/wilson/Dropbox/projects/splits_project/splits'
-let g:netrw_dirhist_4='/Users/wilson/Dropbox/projects/splits_project/splits/views'
-let g:netrw_dirhist_5='/Users/wilson/Dropbox/projects/splits_project/splits'
-let g:netrw_dirhist_6='/Users/wilson/Dropbox/projects/splits_project/splits/helpers'
-let g:netrw_dirhist_7='/Users/wilson/Dropbox/projects/splits_project'
-let g:netrw_dirhist_8='/Users/wilson/Dropbox/projects/splits_project/splits'
-let g:netrw_dirhist_9='/Users/wilson/dotfiles'
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/wilson/Dropbox/projects/splits_project/splits'
+let g:netrw_dirhist_2='/Users/wilson/Dropbox/projects/splits_project/splits/public'
+let g:netrw_dirhist_3='/Users/wilson/Dropbox/projects/splits_project/splits/public/stylesheets'
+let g:netrw_dirhist_4='/Users/wilson/Dropbox/projects/splits_project/splits/public/stylesheets/partials'
