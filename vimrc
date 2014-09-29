@@ -32,6 +32,9 @@ set showcmd
 set cursorline
 set breakindent
 set regexpengine=1
+set nofoldenable
+set showmatch
+set clipboard+=unnamed
 
 au FileType python setl sw=2 sts=2 et
 
