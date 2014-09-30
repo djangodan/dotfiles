@@ -104,3 +104,6 @@ function gph() { rake assets:precompile ; git aa ; git c 'Precompile for heroku 
 function gitsublime() { cd /Users/wilson/Library/Application\ Support/Sublime\ Text\ 3 ;}
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
