@@ -61,6 +61,7 @@ source $ZSH/oh-my-zsh.sh
 function danwilson() { git pull ; jekyll build ; }
 
 alias bjl="cd ~/BJL"
+alias npmdev="nodemon ./bin/www"
 
 # bower
 alias bower="noglob bower"
