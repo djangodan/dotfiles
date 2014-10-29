@@ -58,6 +58,7 @@ nnoremap <down> <nop>
 nnoremap <right> <nop>
 nnoremap <left> <nop>
 :noremap <Leader>r :set nowrap! <CR>
+:inoremap {<CR> {<CR>}<c-o>O
 
 let g:airline#extensions#tabline#enabled = 1
 command -nargs=+ Se execute 'vimgrep /' . [<f-args>][0] . '/ **/*.' . [<f-args>][1]
