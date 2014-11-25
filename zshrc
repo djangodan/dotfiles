@@ -1,7 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 GOPATH="$HOME"
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 alias vim="/usr/local/bin/vim"
 
 # Set name of the theme to load.
@@ -105,6 +104,7 @@ function gph() { rake assets:precompile ; git aa ; git c 'Precompile for heroku 
 function gitsublime() { cd /Users/wilson/Library/Application\ Support/Sublime\ Text\ 3 ;}
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"

@@ -6,7 +6,8 @@ set ruler
 set ignorecase
 set hlsearch!
 set background=dark
-colorscheme Tomorrow-Night
+" colorscheme Tomorrow-Night
+colorscheme solarized
 set lazyredraw
 set t_Co=256
 set smartindent
@@ -61,6 +62,7 @@ nnoremap <left> <nop>
 :inoremap {<CR> {<CR>}<c-o>O
 
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='base16'
 command -nargs=+ Se execute 'vimgrep /' . [<f-args>][0] . '/ **/*.' . [<f-args>][1]
 
 
@@ -75,3 +77,7 @@ endfunction
 nnoremap <expr> i IndentWithI()
 
 set shell=/bin/bash
+
+let g:solarized_termcolors=256
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
