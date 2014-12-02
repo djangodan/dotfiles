@@ -8,7 +8,8 @@ set ruler
 set ignorecase
 set hlsearch!
 set background=dark
-colorscheme Tomorrow-Night
+" colorscheme Tomorrow-Night
+colorscheme solarized
 set lazyredraw
 set t_Co=256
 set smartindent
@@ -67,8 +68,10 @@ noremap <Leader>r :set nowrap! <CR>
 
 " Insert keymaps
 imap <C-[> <Esc>
+:inoremap {<CR> {<CR>}<c-o>O
 
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='base16'
 command -nargs=+ Se execute 'vimgrep /' . [<f-args>][0] . '/ **/*.' . [<f-args>][1]
 
 " Ignore files on ctrlp
