@@ -1,6 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/wilson/Dropbox/projects/splits_project/splits/public/javascripts'
-let g:netrw_dirhist_2='/Users/wilson/Dropbox/projects/splits_project/splits'
-let g:netrw_dirhist_3='/Users/wilson/Dropbox/projects/splits_project/splits/node_modules'
-let g:netrw_dirhist_4='/Users/wilson/Dropbox/projects/splits_project/splits'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/wilson/Dropbox/projects/meter-reading/spec'
+let g:netrw_dirhist_2='/Users/wilson/Dropbox/projects/meter-reading'
+let g:netrw_dirhist_3='/Users/wilson/Dropbox/projects/meter-reading/spec'
+let g:netrw_dirhist_4='/Users/wilson/Dropbox/projects/meter-reading/db'
+let g:netrw_dirhist_5='/Users/wilson/Dropbox/projects/meter-reading/db/migrate'
+let g:netrw_dirhist_6='/Users/wilson/Dropbox/projects/meter-reading'

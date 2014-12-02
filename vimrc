@@ -2,6 +2,8 @@ call pathogen#infect()
 
 filetype indent plugin on
 syntax on
+set visualbell        " That bell is the worst sound. Shut it the fuck off.
+set laststatus=2      " Has to do with the status bar at the bottom. Check :help laststatus
 set ruler
 set ignorecase
 set hlsearch!
@@ -35,33 +37,42 @@ set regexpengine=1
 set nofoldenable
 set showmatch
 set clipboard+=unnamed
+set splitbelow
+set splitright
 
 au FileType python setl sw=2 sts=2 et
+autocmd BufNewFile,BufRead *.scss set ft=scss.css "Sets filetpe of scss to be css. Helps with plugins.
 
 " Keymaps
 let mapleader=","
-:nnoremap <C-]> :set hlsearch!<CR>
+" Normal keymaps
+nmap <CR> o<Esc>k
+nnoremap <C-]> :set hlsearch!<CR>
 nmap <Leader>w :bd<CR>
-:nmap <C-A> :set list!<CR>
+nmap <C-A> :set list!<CR>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-L> <C-W><C-L>
-:imap <C-[> <Esc>
-:nmap j gj
-:nmap k gk
-:nmap \q :nohlsearch<CR>
-:nmap <Leader>x :bnext<CR>
-:nmap <Leader>z :bprev<CR>
+nmap j gj
+nmap k gk
+nmap \q :nohlsearch<CR>
+nmap <Leader>x :bnext<CR>
+nmap <Leader>z :bprev<CR>
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <right> <nop>
 nnoremap <left> <nop>
-:noremap <Leader>r :set nowrap! <CR>
+noremap <Leader>r :set nowrap! <CR>
+
+" Insert keymaps
+imap <C-[> <Esc>
 
 let g:airline#extensions#tabline#enabled = 1
 command -nargs=+ Se execute 'vimgrep /' . [<f-args>][0] . '/ **/*.' . [<f-args>][1]
 
+" Ignore files on ctrlp
+let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn)|node_modules)$'
 
 "smart indent when entering insert mode with i on empty lines
 function! IndentWithI()
@@ -74,3 +85,5 @@ endfunction
 nnoremap <expr> i IndentWithI()
 
 set shell=/bin/bash
+
+set iskeyword+=- "Makes foo-bar considered one word
