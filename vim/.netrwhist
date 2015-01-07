@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/dannywilson/BJL/asda/asda_0826733_halo_emails/templates/pages'
-let g:netrw_dirhist_2='/Users/dannywilson/dotfiles/vim'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/dannywilson/BJL/BJL/brain/build/brain/public_html/wp-content'
+let g:netrw_dirhist_2='/Users/dannywilson/BJL/BJL/brain/build/brain/public_html/wp-content/themes/brain/scss'
+let g:netrw_dirhist_3='/Users/dannywilson/BJL/asda/0826796-babyEventPreawareness/build'
