@@ -4,6 +4,10 @@ call pathogen#infect()
 filetype indent plugin on
 syntax on
 set mouse=a
+" That bell is the worst sound. Shut it the fuck off.
+set visualbell        
+" Has to do with the status bar at the bottom. Check :help laststatus
+set laststatus=2 
 set ruler
 set number
 " Search
@@ -51,8 +55,11 @@ set regexpengine=1
 set nofoldenable
 set showmatch
 set clipboard+=unnamed
+set splitbelow
+set splitright
 
 au FileType python setl sw=2 sts=2 et
+autocmd BufNewFile,BufRead *.scss set ft=scss.css "Sets filetpe of scss to be css. Helps with plugins.
 
 " Keymaps
 let mapleader=","
@@ -62,6 +69,8 @@ let mapleader=","
 nmap <Leader>w :bd<CR>
 " Show tabs ctrl a
 :nmap <C-A> :set list!<CR>
+" Normal keymaps
+nmap <CR> o<Esc>k
 " Better split movement
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -75,8 +84,9 @@ nnoremap <C-L> <C-W><C-L>
 " Don't highlight search
 :nmap \q :nohlsearch<CR>
 " Lazy buffer movement ,xz
-:nmap <Leader>x :bnext<CR>
-:nmap <Leader>z :bprev<CR>
+nmap \q :nohlsearch<CR>
+nmap <Leader>x :bnext<CR>
+nmap <Leader>z :bprev<CR>
 " No arrow keys
 nnoremap <up> <nop>
 nnoremap <down> <nop>
@@ -85,12 +95,18 @@ nnoremap <left> <nop>
 " Removed word wrap ,r
 :noremap <Leader>r :set nowrap! <CR>
 " Auto complete {}
+noremap <Leader>r :set nowrap! <CR>
+
+" Insert keymaps
+imap <C-[> <Esc>
 :inoremap {<CR> {<CR>}<c-o>O
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='base16'
 command -nargs=+ Se execute 'vimgrep /' . [<f-args>][0] . '/ **/*.' . [<f-args>][1]
 
+" Ignore files on ctrlp
+let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn)|node_modules)$'
 
 "smart indent when entering insert mode with i on empty lines
 function! IndentWithI()
@@ -109,3 +125,4 @@ let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 
 :command Copyemail ! grunt build && cat index.html | pbcopy
+set iskeyword+=- "Makes foo-bar considered one word
