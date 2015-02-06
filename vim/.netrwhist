@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/wilson/Dropbox/projects/meter-reading'
-let g:netrw_dirhist_2='/Users/wilson/Dropbox/projects/meter-reading/app'
-let g:netrw_dirhist_3='/Users/wilson/Dropbox/projects/meter-reading/app/controllers'
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/dannywilson/BJL/asda/_builders/link_tagger_helper/templates'
+let g:netrw_dirhist_2='/Users/dannywilson/BJL/asda/_builders/link_tagger_helper'
+let g:netrw_dirhist_3='/Users/dannywilson/BJL/asda/_builders/link_tagger_helper/helpers'
+let g:netrw_dirhist_4='/Users/dannywilson/BJL/asda/_builders/generator-asda-email'
+let g:netrw_dirhist_5='/Users/dannywilson/BJL/sage/0826933_infographic/build'
+let g:netrw_dirhist_6='/Users/dannywilson/BJL/asda/_builders/generator-asda-email'

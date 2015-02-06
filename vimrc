@@ -16,7 +16,8 @@ set hlsearch!
 set incsearch
 " Colors
 set background=dark
-colorscheme solarized
+colorscheme base16-default
+let base16colorspace=256
 set lazyredraw
 set t_Co=256
 " Indentation
