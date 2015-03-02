@@ -1,40 +1,58 @@
 call pathogen#infect()
 
+" Default vim stuff
 filetype indent plugin on
 syntax on
-set visualbell        " That bell is the worst sound. Shut it the fuck off.
-set laststatus=2      " Has to do with the status bar at the bottom. Check :help laststatus
+set mouse=a
+" That bell is the worst sound. Shut it the fuck off.
+set visualbell        
+" Has to do with the status bar at the bottom. Check :help laststatus
+set laststatus=2 
 set ruler
+set number
+" Search
 set ignorecase
 set hlsearch!
+set incsearch
+" Colors
 set background=dark
-" colorscheme Tomorrow-Night
-colorscheme solarized
+colorscheme base16-default
+let base16colorspace=256
 set lazyredraw
 set t_Co=256
+" Indentation
 set smartindent
-set number
-set incsearch
 set smarttab
 set shiftwidth=2
 set tabstop=2
 set softtabstop=2
 set expandtab
+" Scroll before bottom
 set scrolloff=10
+" Word wraps and line breaks
 set wrap
 set linebreak
+" Show tabs
 set nolist
+" Normal backspace
 set backspace=2
 set backspace=indent,eol,start
+" Always show status bar
 set laststatus=2
+" Set terminal title
 set title
+" vim file shit
 set nobackup
 set noswapfile
 set hidden
+" Show command in status bar
 set showcmd
+" Highlight cursor line
 set cursorline
+" Better lin break on 7.4
 set breakindent
 set regexpengine=1
+" Don't fold shit
 set nofoldenable
 set showmatch
 set clipboard+=unnamed
@@ -46,24 +64,38 @@ autocmd BufNewFile,BufRead *.scss set ft=scss.css "Sets filetpe of scss to be cs
 
 " Keymaps
 let mapleader=","
+" Toggle highlight search ctrl ]
+:nnoremap <C-]> :set hlsearch!<CR>
+" Close buffer ,w
+nmap <Leader>w :bd<CR>
+" Show tabs ctrl a
+:nmap <C-A> :set list!<CR>
 " Normal keymaps
 nmap <CR> o<Esc>k
-nnoremap <C-]> :set hlsearch!<CR>
-nmap <Leader>w :bd<CR>
-nmap <C-A> :set list!<CR>
+" Better split movement
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-L> <C-W><C-L>
-nmap j gj
-nmap k gk
+" Esc with ctrl [
+:imap <C-[> <Esc>
+" Better line movement
+:nmap j gj
+:nmap k gk
+" Don't highlight search
+:nmap \q :nohlsearch<CR>
+" Lazy buffer movement ,xz
 nmap \q :nohlsearch<CR>
 nmap <Leader>x :bnext<CR>
 nmap <Leader>z :bprev<CR>
+" No arrow keys
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <right> <nop>
 nnoremap <left> <nop>
+" Removed word wrap ,r
+:noremap <Leader>r :set nowrap! <CR>
+" Auto complete {}
 noremap <Leader>r :set nowrap! <CR>
 
 " Insert keymaps
@@ -89,4 +121,9 @@ nnoremap <expr> i IndentWithI()
 
 set shell=/bin/bash
 
+let g:solarized_termcolors=256
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+
+:command Copyemail ! grunt build && cat index.html | pbcopy
 set iskeyword+=- "Makes foo-bar considered one word
