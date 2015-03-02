@@ -2,6 +2,9 @@
 ZSH=$HOME/.oh-my-zsh
 GOPATH="$HOME"
 alias vim="/usr/local/bin/vim"
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/directory-you-do-development-in
+source /usr/local/bin/virtualenvwrapper.sh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
