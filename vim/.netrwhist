@@ -1,8 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/dannywilson/BJL/asda/_builders/link_tagger_helper/templates'
-let g:netrw_dirhist_2='/Users/dannywilson/BJL/asda/_builders/link_tagger_helper'
-let g:netrw_dirhist_3='/Users/dannywilson/BJL/asda/_builders/link_tagger_helper/helpers'
-let g:netrw_dirhist_4='/Users/dannywilson/BJL/asda/_builders/generator-asda-email'
-let g:netrw_dirhist_5='/Users/dannywilson/BJL/sage/0826933_infographic/build'
-let g:netrw_dirhist_6='/Users/dannywilson/BJL/asda/_builders/generator-asda-email'
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/dannywilson/_bjl/asda/0826882_pollLandingPage'
+let g:netrw_dirhist_2='/Users/dannywilson/_bjl/asda/0827270_promoWk9'
+let g:netrw_dirhist_3='/Users/dannywilson/_bjl/asda/0827263_NoughtsAndCrossesGame/build'
+let g:netrw_dirhist_4='/Users/dannywilson/_bjl/asda/0827263_NoughtsAndCrossesGame/build/scss'
+let g:netrw_dirhist_5='/Users/dannywilson/_bjl/asda/0827263_NoughtsAndCrossesGame/build'
+let g:netrw_dirhist_6='/Users/dannywilson/_bjl/asda/0827290_gvWK10'
+let g:netrw_dirhist_7='/Users/dannywilson/_bjl/asda/0827272_kidsWk10/data'
+let g:netrw_dirhist_8='/Users/dannywilson/dotfiles/vim'

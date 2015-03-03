@@ -4,6 +4,9 @@ call pathogen#infect()
 filetype indent plugin on
 syntax on
 set mouse=a
+" Set no folding
+set nofoldenable
+let g:vim_markdown_folding_disabled=1
 " That bell is the worst sound. Shut it the fuck off.
 set visualbell        
 " Has to do with the status bar at the bottom. Check :help laststatus
