@@ -105,6 +105,10 @@ noremap <Leader>r :set nowrap! <CR>
 imap <C-[> <Esc>
 :inoremap {<CR> {<CR>}<c-o>O
 
+" Visual keymaps
+" paste over selection
+vmap  r "_dP
+
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='base16'
 command -nargs=+ Se execute 'vimgrep /' . [<f-args>][0] . '/ **/*.' . [<f-args>][1]
