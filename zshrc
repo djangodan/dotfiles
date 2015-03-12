@@ -64,7 +64,7 @@ alias gitdot="cd ~/dotfiles"
 alias subdot="sublime ~/dotfiles"
 
 # github local repos
-alias github="cd ~/Dropbox/projects"
+alias github="cd ~/_dev"
 
 # Ezpz
 alias c="clear"
