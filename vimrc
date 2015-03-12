@@ -4,6 +4,9 @@ call pathogen#infect()
 filetype indent plugin on
 syntax on
 set mouse=a
+" Set no folding
+set nofoldenable
+let g:vim_markdown_folding_disabled=1
 " That bell is the worst sound. Shut it the fuck off.
 set visualbell        
 " Has to do with the status bar at the bottom. Check :help laststatus
@@ -101,6 +104,10 @@ noremap <Leader>r :set nowrap! <CR>
 " Insert keymaps
 imap <C-[> <Esc>
 :inoremap {<CR> {<CR>}<c-o>O
+
+" Visual keymaps
+" paste over selection
+vmap  r "_dP
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='base16'

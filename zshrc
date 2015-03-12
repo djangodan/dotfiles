@@ -33,7 +33,7 @@ alias activate="source venv/bin/activate"
 # VPS pull and build
 function danwilson() { git pull ; jekyll build ; }
 
-alias bjl="cd ~/BJL"
+alias bjl="cd ~/_bjl"
 alias npmdev="nodemon ./bin/www"
 
 # bower
@@ -84,3 +84,4 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+eval "$(rbenv init -)"
