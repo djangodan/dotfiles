@@ -40,10 +40,16 @@ alias npmdev="nodemon ./bin/www"
 # bower
 alias bower="noglob bower"
 # tmux
-alias tma="tmux attach -t"
-alias tmd="tmux detach"
-alias tml="tmux ls"
+alias tnew="new-tmux-from-dir-name"
+alias tatt="tmux attach-session -t "
+alias td="tmux detach"
+alias tls="tmux ls"
+alias tkill="tmux kill-session -t "
 alias tmk='tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-session -t {}'
+
+function new-tmux-from-dir-name {
+  tmux new-session -As `basename $PWD`
+}
 
 alias vi="open -a vimr.app $*"
 
@@ -75,13 +81,13 @@ alias purge="sudo purge"
 function gph() { rake assets:precompile ; git aa ; git c 'Precompile for heroku push' ; git ps ; git ph ; }
 
 # RVM Stuffs
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # Navigate to Sublime git repo
 function gitsublime() { cd /Users/wilson/Library/Application\ Support/Sublime\ Text\ 3 ;}
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
