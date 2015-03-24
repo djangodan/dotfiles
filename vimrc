@@ -26,9 +26,9 @@ set t_Co=256
 " Indentation
 set smartindent
 set smarttab
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
 set expandtab
 " Scroll before bottom
 set scrolloff=10
@@ -62,7 +62,7 @@ set clipboard+=unnamed
 set splitbelow
 set splitright
 
-au FileType python setl sw=2 sts=2 et
+au FileType python setlocal sw=4 sts=4 et
 autocmd BufNewFile,BufRead *.scss set ft=scss.css "Sets filetpe of scss to be css. Helps with plugins.
 
 " Keymaps
