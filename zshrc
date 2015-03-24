@@ -36,6 +36,7 @@ function danwilson() { git pull ; jekyll build ; }
 alias bjl="cd ~/_bjl"
 alias tools="cd ~/_bjl/_tools"
 alias npmdev="nodemon ./bin/www"
+alias cemail="cat dist/index.html | pbcopy"
 
 # bower
 alias bower="noglob bower"
