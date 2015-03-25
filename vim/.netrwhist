@@ -1,8 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/Users/dannywilson/_bjl/asda/0827438_storeTemplates'
 let g:netrw_dirhist_2='/Users/dannywilson/_bjl/asda/0827438_storeTemplates/alsager'
 let g:netrw_dirhist_3='/Users/wilson/dotfiles'
 let g:netrw_dirhist_4='/Users/dannywilson/_bjl/asda/0827425_bws13'
 let g:netrw_dirhist_5='/Users/dannywilson/dotfiles'
 let g:netrw_dirhist_6='/Users/dannywilson/_dev/tosell'
+let g:netrw_dirhist_7='/Users/dannywilson/_bjl/asda/0827425_bws13'
