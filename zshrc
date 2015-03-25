@@ -92,3 +92,6 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+export ANDROID_HOME=/Users/dannywilson/Library/Android/sdk
+export PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$PATH"
