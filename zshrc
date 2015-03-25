@@ -7,11 +7,7 @@ export PROJECT_HOME=$HOME/directory-you-do-development-in
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
 ZSH_THEME="terminalparty"
-# ZSH_THEME="kardan"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
@@ -19,7 +15,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git bower brew gem npm osx pip sudo vagrant virtualenvwrapper web-search)
 
 source $ZSH/oh-my-zsh.sh
 
