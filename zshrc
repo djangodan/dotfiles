@@ -33,7 +33,7 @@ alias bjl="cd ~/_bjl"
 alias tools="cd ~/_bjl/_tools"
 alias npmdev="nodemon ./bin/www"
 alias cemail="cat dist/index.html | pbcopy"
-alias prcheck="lpr ~/_bjlasda/_docs/Developer-Email-QA-Checklist.pdf"
+alias prcheck="lpr ~/_bjl/asda/_docs/Developer-Email-QA-Checklist.pdf"
 
 # bower
 alias bower="noglob bower"
