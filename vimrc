@@ -20,7 +20,7 @@ set incsearch
 " Colors
 set background=dark
 let base16colorspace=256
-colorscheme base16-default
+colorscheme tomorrow-night
 set lazyredraw
 set t_Co=256
 " Indentation
