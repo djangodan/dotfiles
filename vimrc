@@ -1,28 +1,32 @@
 call pathogen#infect()
 
-" Default vim stuff
-filetype indent plugin on
-syntax on
-set mouse=a
-" Set no folding
-set nofoldenable
-let g:vim_markdown_folding_disabled=1
-" That bell is the worst sound. Shut it the fuck off.
-set visualbell
-" Has to do with the status bar at the bottom. Check :help laststatus
-set laststatus=2
-set ruler
-set number
-" Search
-set ignorecase
-set hlsearch!
-set incsearch
-" Colors
+" Visual
 set background=dark
 let base16colorspace=256
 colorscheme tomorrow-night
 set lazyredraw
 set t_Co=256
+
+" Behaviour
+set mouse=a
+filetype indent plugin on
+set nofoldenable
+let g:vim_markdown_folding_disabled=1
+set visualbell
+set scrolloff=15
+
+" Look/Feel
+set cursorline
+set laststatus=2
+set ruler
+set number
+syntax on
+
+" Search
+set ignorecase
+set hlsearch!
+set incsearch
+
 " Indentation
 set smartindent
 set smarttab
@@ -30,31 +34,33 @@ set shiftwidth=2
 set tabstop=2
 set softtabstop=2
 set expandtab
-" Scroll before bottom
-set scrolloff=10
+
 " Word wraps and line breaks
 set wrap
 set linebreak
+
 " Show tabs
 set nolist
+
 " Normal backspace
 set backspace=2
 set backspace=indent,eol,start
-" Always show status bar
-set laststatus=2
+
 " Set terminal title
 set title
+
 " vim file shit
 set nobackup
 set noswapfile
 set hidden
+
 " Show command in status bar
 set showcmd
-" Highlight cursor line
-set cursorline
+
 " Better lin break on 7.4
 set breakindent
 set regexpengine=1
+
 " Don't fold shit
 set nofoldenable
 set showmatch
