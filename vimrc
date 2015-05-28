@@ -68,7 +68,9 @@ set clipboard+=unnamed
 set splitbelow
 set splitright
 
-au FileType python setlocal sw=4 sts=4 et
+autocmd FileType python set sw=4
+autocmd FileType python set ts=4
+autocmd FileType python set sts=4
 autocmd BufNewFile,BufRead *.scss set ft=scss.css "Sets filetpe of scss to be css. Helps with plugins.
 
 " Keymaps
