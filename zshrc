@@ -34,6 +34,7 @@ alias activate="source venv/bin/activate"
 function danwilson() { git pull ; jekyll build ; }
 
 alias bjl="cd ~/_bjl"
+alias tools="cd ~/_bjl/_tools"
 alias npmdev="nodemon ./bin/www"
 
 # bower

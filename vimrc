@@ -8,9 +8,9 @@ set mouse=a
 set nofoldenable
 let g:vim_markdown_folding_disabled=1
 " That bell is the worst sound. Shut it the fuck off.
-set visualbell        
+set visualbell
 " Has to do with the status bar at the bottom. Check :help laststatus
-set laststatus=2 
+set laststatus=2
 set ruler
 set number
 " Search
@@ -26,9 +26,9 @@ set t_Co=256
 " Indentation
 set smartindent
 set smarttab
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
 set expandtab
 " Scroll before bottom
 set scrolloff=10
