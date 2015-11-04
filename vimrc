@@ -30,8 +30,8 @@ set incsearch
 " Indentation
 set smartindent
 set smarttab
-set shiftwidth=2
 set tabstop=2
+set shiftwidth=2 
 set softtabstop=2
 set expandtab
 
@@ -68,9 +68,12 @@ set clipboard+=unnamed
 set splitbelow
 set splitright
 
+" Python file settings
 autocmd FileType python set sw=4
 autocmd FileType python set ts=4
 autocmd FileType python set sts=4
+
+" Set scss files to use css
 autocmd BufNewFile,BufRead *.scss set ft=scss.css "Sets filetpe of scss to be css. Helps with plugins.
 
 " Keymaps
@@ -117,12 +120,17 @@ imap <C-[> <Esc>
 " paste over selection
 vmap  r "_dP
 
+" Airline settings
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='base16'
 command -nargs=+ Se execute 'vimgrep /' . [<f-args>][0] . '/ **/*.' . [<f-args>][1]
 
 " Ignore files on ctrlp
-let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn)|node_modules)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll|pyc)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
 
 "smart indent when entering insert mode with i on empty lines
 function! IndentWithI()
