@@ -69,6 +69,7 @@ set splitbelow
 set splitright
 
 " Python file settings
+autocmd FileType * set tabstop=2|set shiftwidth=2|set noexpandtab
 autocmd FileType python set sw=4
 autocmd FileType python set ts=4
 autocmd FileType python set sts=4
