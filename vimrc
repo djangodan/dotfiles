@@ -30,9 +30,9 @@ set incsearch
 " Indentation
 set smartindent
 set smarttab
-set tabstop=2
-set shiftwidth=2 
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 
 " Word wraps and line breaks
@@ -67,12 +67,6 @@ set showmatch
 set clipboard+=unnamed
 set splitbelow
 set splitright
-
-" Python file settings
-autocmd FileType * set tabstop=2|set shiftwidth=2|set noexpandtab
-autocmd FileType python set sw=4
-autocmd FileType python set ts=4
-autocmd FileType python set sts=4
 
 " Set scss files to use css
 autocmd BufNewFile,BufRead *.scss set ft=scss.css "Sets filetpe of scss to be css. Helps with plugins.
