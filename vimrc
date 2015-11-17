@@ -3,9 +3,14 @@ call pathogen#infect()
 " Visual
 set background=dark
 let base16colorspace=256
-colorscheme tomorrow-night
+colorscheme base16-default
 set lazyredraw
 set t_Co=256
+set cursorline
+set laststatus=2
+set ruler
+set number
+syntax on
 
 " Behaviour
 set mouse=a
@@ -14,13 +19,6 @@ set nofoldenable
 let g:vim_markdown_folding_disabled=1
 set visualbell
 set scrolloff=15
-
-" Look/Feel
-set cursorline
-set laststatus=2
-set ruler
-set number
-syntax on
 
 " Search
 set ignorecase
@@ -35,24 +33,11 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
-au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
-
 " Word wraps and line breaks
 set wrap
 set linebreak
 
-" Show tabs
-set nolist
-
 " Normal backspace
-set backspace=2
 set backspace=indent,eol,start
 
 " Set terminal title
@@ -66,14 +51,15 @@ set hidden
 " Show command in status bar
 set showcmd
 
-" Better lin break on 7.4
+" Better line break on 7.4
 set breakindent
 set regexpengine=1
 
 " Don't fold shit
-set nofoldenable
 set showmatch
 set clipboard+=unnamed
+
+" Better splitting
 set splitbelow
 set splitright
 

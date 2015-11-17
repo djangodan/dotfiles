@@ -15,7 +15,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git bower brew gem npm osx pip sudo vagrant virtualenvwrapper web-search django cp)
+plugins=(git bower brew gem npm osx pip sudo vagrant virtualenvwrapper web-search django cp zsh-snippets)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -34,6 +34,8 @@ alias tools="cd ~/_bjl/_tools"
 alias npmdev="nodemon ./bin/www"
 alias cemail="cat dist/index.html | pbcopy"
 alias prcheck="lpr ~/_bjl/asda/_docs/Developer-Email-QA-Checklist.pdf"
+
+# snippets
 
 # bower
 alias bower="noglob bower"
