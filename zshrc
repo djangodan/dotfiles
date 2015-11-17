@@ -22,20 +22,10 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-# activate venv
-alias activate="source venv/bin/activate"
-
-# My settings
-# VPS pull and build
-function danwilson() { git pull ; jekyll build ; }
-
 alias bjl="cd ~/_bjl"
 alias tools="cd ~/_bjl/_tools"
-alias npmdev="nodemon ./bin/www"
 alias cemail="cat dist/index.html | pbcopy"
 alias prcheck="lpr ~/_bjl/asda/_docs/Developer-Email-QA-Checklist.pdf"
-
-# snippets
 
 # bower
 alias bower="noglob bower"
@@ -56,9 +46,6 @@ alias vi="open -a vimr.app $*"
 # python stuffs
 alias py="python"
 alias py2="python2"
-alias newvenv="virtualenv venv"
-alias actv="source venv/bin/activate"
-alias deactv="deactivate"
 
 # Rpi alias
 alias pacin="sudo pacman -S"
@@ -68,7 +55,6 @@ alias aptser="sduo apt-cache search"
 
 # dotfiles
 alias gitdot="cd ~/dotfiles"
-alias subdot="sublime ~/dotfiles"
 
 # github local repos
 alias github="cd ~/_dev"
@@ -76,12 +62,6 @@ alias github="cd ~/_dev"
 # Ezpz
 alias c="clear"
 alias purge="sudo purge"
-
-# Easy heroku
-function gph() { rake assets:precompile ; git aa ; git c 'Precompile for heroku push' ; git ps ; git ph ; }
-
-# RVM Stuffs
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # Navigate to Sublime git repo
 function gitsublime() { cd /Users/wilson/Library/Application\ Support/Sublime\ Text\ 3 ;}
