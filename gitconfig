@@ -33,11 +33,10 @@
   b = branch -v                     # branch (verbose)
 
   # commit
-  c = commit -m                     # commit with message
+  c = commit                        # commit
+  cm = commit -m                     # commit with message
   ca = commit -am                   # commit all with message
-  ci = commit                       # commit
   amend = commit --amend            # ammend your last commit
-  ammend = commit --amend           # ammend your last commit
 
   # checkout
   co = checkout                     # checkout
@@ -47,7 +46,7 @@
   cp = cherry-pick -x               # grab a change from a branch
 
   # diff
-	d = difftool
+  d = difftool
   dc = diff --cached                # diff staged changes
   last = diff HEAD^                 # diff last committed change
 
@@ -78,10 +77,6 @@
   uncommit = reset --soft HEAD^     # go back before last commit, with files in uncommitted state
   filelog = log -u                  # show changes to a file
   mt = mergetool                    # fire up the merge tool
-
-  # merge
-  md = merge dev                    # merge dev
-	# md = checkout master && git merge dev
 
   # stash
   ss = stash                        # stash changes
