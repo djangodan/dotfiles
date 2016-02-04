@@ -72,6 +72,10 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
+# Node modules
+export NODE_PATH="/Users/dannywilson/.node/lib/node_modules"
+export PATH="/Users/dannywilson/.node/bin/:$PATH"
+
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
