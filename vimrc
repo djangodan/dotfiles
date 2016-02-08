@@ -1,4 +1,28 @@
-call pathogen#infect()
+" Set up vundle
+set nocompatible
+filetype off 
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Vundle Plugins
+Plugin 'VundleVim/Vundle.vim'
+
+" Base16 plugin
+Plugin 'chriskempson/base16-vim'
+
+" Emmet plugin
+Plugin 'mattn/emmet-vim'
+
+" Ctrlp plugin
+Plugin 'kien/ctrlp.vim'
+
+" Airlin plugin
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+call vundle#end()
+filetype plugin indent on
+" End vundle plugins
 
 " Set background to dark
 set background=dark
@@ -18,11 +42,24 @@ set number
 " Set syntax on
 syntax on
 
+" Show cursor position at all times
+set ruler
+
+" Better redrawing
+set lazyredraw
+set ttyfast
+
 " Set scroll of to 15 lines
 set scrolloff=15
 
 " Ignore case while searching
 set ignorecase
+
+" Search as you type
+set incsearch
+
+" Highlight search
+set hlsearch
 
 " Enable smart indent
 set smartindent
@@ -61,6 +98,12 @@ set regexpengine=1
 set splitbelow
 set splitright
 
+" Airline settings
+set laststatus=2
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
+let g:airline_theme = 'base16'
+
 
 " Keymaps
 " Set leader to ,
@@ -74,6 +117,9 @@ nnoremap <C-L> <C-W><C-L>
 
 " Esc with ctrl [
 :imap <C-[> <Esc>
+
+" Clear search highligh on esc
+nnoremap <esc> :noh<return><esc>
 
 " Better line movement
 :nmap j gj
