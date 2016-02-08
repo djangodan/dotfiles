@@ -1,120 +1,96 @@
 call pathogen#infect()
 
-" Visual
+" Set background to dark
 set background=dark
+
+" Use 256 colours for theme
 let base16colorspace=256
+
+" Set theme to base16
 colorscheme base16-default
-set lazyredraw
-set t_Co=256
+
+" Hightlight cursor line
 set cursorline
-set laststatus=2
-set ruler
+
+" Show line numbers
 set number
+
+" Set syntax on
 syntax on
 
-" Behaviour
-set mouse=a
-filetype indent plugin on
-set nofoldenable
-let g:vim_markdown_folding_disabled=1
-let g:vim_markdown_frontmatter=1
-set visualbell
+" Set scroll of to 15 lines
 set scrolloff=15
 
-" Search
+" Ignore case while searching
 set ignorecase
-set hlsearch!
-set incsearch
 
-" Indentation
+" Enable smart indent
 set smartindent
+
+" Enable smart tabs
 set smarttab
+
+" Set tabs width to 2 spaces
 set tabstop=2
+
+" Set shift width to 2 spaces
 set shiftwidth=2
+
+" Set soft tabs to 2 spaces
 set softtabstop=2
+
+" Set expandtab
 set expandtab
 
 " Word wraps and line breaks
 set wrap
+
+" Break lines at break
 set linebreak
 
 " Normal backspace
 set backspace=indent,eol,start
 
-" Set terminal title
-set title
-
-" vim file shit
-set nobackup
-set noswapfile
-set hidden
-
 " Show command in status bar
 set showcmd
-
 " Better line break on 7.4
 set breakindent
 set regexpengine=1
-
-" Don't fold shit
-set showmatch
-set clipboard+=unnamed
 
 " Better splitting
 set splitbelow
 set splitright
 
-" Set scss files to use css
-autocmd BufNewFile,BufRead *.scss set ft=scss.css "Sets filetpe of scss to be css. Helps with plugins.
 
 " Keymaps
+" Set leader to ,
 let mapleader=","
-" Toggle highlight search ctrl ]
-:nnoremap <C-]> :set hlsearch!<CR>
-" Close buffer ,w
-nmap <Leader>w :bd<CR>
-" Show tabs ctrl a
-:nmap <C-A> :set list!<CR>
-" Normal keymaps
-nmap <CR> o<Esc>k
+
 " Better split movement
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-L> <C-W><C-L>
+
 " Esc with ctrl [
 :imap <C-[> <Esc>
+
 " Better line movement
 :nmap j gj
 :nmap k gk
-" Don't highlight search
-:nmap \q :nohlsearch<CR>
-" Lazy buffer movement ,xz
-nmap \q :nohlsearch<CR>
+
+" Set buffer movement to ,x ,z
 nmap <Leader>x :bnext<CR>
 nmap <Leader>z :bprev<CR>
+
 " No arrow keys
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <right> <nop>
 nnoremap <left> <nop>
-" Removed word wrap ,r
-:noremap <Leader>r :set nowrap! <CR>
-" Auto complete {}
-noremap <Leader>r :set nowrap! <CR>
 
-" Insert keymaps
-imap <C-[> <Esc>
-:inoremap {<CR> {<CR>}<c-o>O
-
-" Visual keymaps
 " paste over selection
 vmap  r "_dP
-
-" Airline settings
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='base16'
-command -nargs=+ Se execute 'vimgrep /' . [<f-args>][0] . '/ **/*.' . [<f-args>][1]
 
 " Ignore files on ctrlp
 let g:ctrlp_custom_ignore = {
@@ -122,35 +98,5 @@ let g:ctrlp_custom_ignore = {
   \ 'file': '\v\.(exe|so|dll|pyc)$',
   \ }
 
-"smart indent when entering insert mode with i on empty lines
-function! IndentWithI()
-if len(getline('.')) == 0
-return "\"_ddO"
-else
-return "i"
-endif
-endfunction
-nnoremap <expr> i IndentWithI()
-
-set shell=/bin/bash
-
-let g:solarized_termcolors=256
-let g:solarized_visibility = "high"
-let g:solarized_contrast = "high"
-
-:command Copyemail ! grunt build && cat index.html | pbcopy
-set iskeyword+=- "Makes foo-bar considered one word
-
-" The Silver Searcher
-if executable('ag')
-  " Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-endif
-" bind K to grep word under cursor
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+" Copy email to clipboard
+:command Copyemail ! grunt build && cat dist/index.html | pbcopy
