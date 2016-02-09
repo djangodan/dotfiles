@@ -20,6 +20,9 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+" Tmuxline plugin
+Plugin 'edkolev/tmuxline.vim'
+
 call vundle#end()
 filetype plugin indent on
 " End vundle plugins
@@ -31,7 +34,7 @@ set background=dark
 let base16colorspace=256
 
 " Set theme to base16
-colorscheme base16-default
+colorscheme base16-ocean
 
 " Hightlight cursor line
 set cursorline
@@ -102,7 +105,7 @@ set splitright
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_theme = 'base16'
+" let g:airline_theme = 'base16_ocean'
 
 
 " Keymaps
@@ -143,6 +146,14 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$|node_modules',
   \ 'file': '\v\.(exe|so|dll|pyc)$',
   \ }
+
+" tmuxline seperators
+let g:tmuxline_separators = {
+    \ 'left' : '',
+    \ 'left_alt': '>',
+    \ 'right' : '',
+    \ 'right_alt' : '<',
+    \ 'space' : ' '}
 
 " Copy email to clipboard
 :command Copyemail ! grunt build && cat dist/index.html | pbcopy
