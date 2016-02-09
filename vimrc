@@ -42,6 +42,9 @@ set cursorline
 " Show line numbers
 set number
 
+" No swap files
+set nos
+
 " Set syntax on
 syntax on
 
