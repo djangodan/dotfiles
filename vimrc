@@ -157,3 +157,7 @@ let g:tmuxline_separators = {
 
 " Copy email to clipboard
 :command Copyemail ! grunt build && cat dist/index.html | pbcopy
+
+" Better Netrw
+let g:netrw_liststyle=3
+map <leader>e :Explore<cr>
