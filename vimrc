@@ -43,7 +43,7 @@ set cursorline
 set number
 
 " No swap files
-set nos
+set noswapfile
 
 " Set syntax on
 syntax on
