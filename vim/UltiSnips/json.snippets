@@ -1,0 +1,44 @@
+snippet himage
+{
+	"src": "<%= config.imgsrc %>$1",
+	"colspan": "3",
+	"height": "$4",
+	"title": "$2",
+	"link": "<% links.$1.url %>",
+	"type": "image"
+}
+endsnippet
+
+snippet fimage
+{
+	"src": "<%= config.imgsrc %>$1",
+	"class": "mobile-300",
+	"width": "600",
+	"height": "$4",
+	"title": "$2",
+	"link": "<% links.$1.url %>",
+	"type": "image"
+}
+endsnippet
+
+snippet link
+"$1": {
+	"url": "link"
+},
+endsnippet
+
+snippet text
+{
+	"class": "mobile-300",
+	"width": "265",
+	"padding": "15",
+	"height": "100",
+	"bgcolor": "#ffffff",
+	"color": "#000000",
+	"size": "16",
+	"weight": "bold",
+	"text": "$1",
+	"customstyles": "text-align:center;",
+	"type" : "text"
+}
+endsnippet
