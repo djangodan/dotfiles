@@ -25,7 +25,6 @@ source $ZSH/oh-my-zsh.sh
 alias bjl="cd ~/_bjl"
 alias tools="cd ~/_bjl/_tools"
 alias cemail="cat dist/index.html | pbcopy"
-alias prcheck="lpr ~/_bjl/asda/_docs/Developer-Email-QA-Checklist.pdf"
 
 # bower
 alias bower="noglob bower"
@@ -41,30 +40,18 @@ function new-tmux-from-dir-name {
   tmux new-session -As `basename $PWD`
 }
 
-alias vi="open -a vimr.app $*"
-
-# python stuffs
-alias py="python"
-alias py2="python2"
-
 # Rpi alias
 alias pacin="sudo pacman -S"
 alias pacser="pacman -Ss"
 alias aptin="sudo apt-get install"
 alias aptser="sduo apt-cache search"
 
-# dotfiles
-alias gitdot="cd ~/dotfiles"
-
 # github local repos
-alias github="cd ~/_dev"
+alias dev="cd ~/_dev"
 
 # Ezpz
 alias c="clear"
 alias purge="sudo purge"
-
-# Navigate to Sublime git repo
-function gitsublime() { cd /Users/wilson/Library/Application\ Support/Sublime\ Text\ 3 ;}
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
