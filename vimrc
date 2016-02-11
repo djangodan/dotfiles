@@ -30,6 +30,9 @@ Plugin 'plasticboy/vim-markdown'
 " goyo
 Plugin 'junegunn/goyo.vim'
 
+" Snippets
+Plugin 'SirVer/ultisnips'
+
 call vundle#end()
 filetype plugin indent on
 " End vundle plugins
@@ -175,3 +178,8 @@ map <leader>e :Explore<cr>
 " Markdown settings
 let g:vim_markdown_folding_disabled = 1
 let g:vim_markdown_frontmatter = 1
+
+" Snippet settings
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
