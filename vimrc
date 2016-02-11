@@ -183,3 +183,4 @@ let g:vim_markdown_frontmatter = 1
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+set runtimepath+=~/.vim/ultisnips_rep
