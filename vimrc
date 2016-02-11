@@ -23,6 +23,13 @@ Plugin 'vim-airline/vim-airline-themes'
 " Tmuxline plugin
 Plugin 'edkolev/tmuxline.vim'
 
+" Markdown syntax
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+
+" goyo
+Plugin 'junegunn/goyo.vim'
+
 call vundle#end()
 filetype plugin indent on
 " End vundle plugins
@@ -164,3 +171,7 @@ let g:tmuxline_separators = {
 " Better Netrw
 let g:netrw_liststyle=3
 map <leader>e :Explore<cr>
+
+" Markdown settings
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_frontmatter = 1
