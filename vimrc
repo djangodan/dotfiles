@@ -33,6 +33,13 @@ Plugin 'junegunn/goyo.vim'
 " Snippets
 Plugin 'SirVer/ultisnips'
 
+" Commentary
+Plugin 'tpope/vim-commentary'
+
+" vim-surround
+Plugin 'tpope/vim-surround'
+
+
 call vundle#end()
 filetype plugin indent on
 " End vundle plugins
@@ -138,8 +145,8 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <esc> :noh<return><esc>
 
 " Better line movement
-:nmap j gj
-:nmap k gk
+nmap j gj
+nmap k gk
 
 " Set buffer movement to ,x ,z
 nmap <Leader>x :bnext<CR>
@@ -168,8 +175,6 @@ let g:tmuxline_separators = {
     \ 'right_alt' : '<',
     \ 'space' : ' '}
 
-" Copy email to clipboard
-:command Copyemail ! grunt build && cat dist/index.html | pbcopy
 
 " Better Netrw
 let g:netrw_liststyle=3
