@@ -22,6 +22,9 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# open for tmux
+alias open='reattach-to-user-namespace open'
+
 alias bjl="cd ~/_bjl"
 alias tools="cd ~/_bjl/_tools"
 alias cemail="cat dist/index.html | pbcopy"
@@ -38,6 +41,12 @@ alias tmk='tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-sess
 
 function new-tmux-from-dir-name {
   tmux new-session -As `basename $PWD`
+}
+
+alias wat="start-watson-from-dir-name"
+
+function start-watson-from-dir-name {
+  watson start `basename $PWD`
 }
 
 # Rpi alias
