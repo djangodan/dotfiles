@@ -1,7 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 GOPATH="$HOME"
-alias vim="/usr/local/bin/vim"
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/directory-you-do-development-in
 source /usr/local/bin/virtualenvwrapper.sh
@@ -22,15 +21,20 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
-# open for tmux
-alias open='reattach-to-user-namespace open'
-
+# File system shortcuts
+alias dev="cd ~/_dev"
 alias bjl="cd ~/_bjl"
-alias tools="cd ~/_bjl/_tools"
+alias writing="cd ~/Dropbox/writting"
+
+# Email shortcuts
 alias cemail="cat dist/index.html | pbcopy"
 
 # bower
 alias bower="noglob bower"
+
+# Vim
+alias vim="/usr/local/bin/vim"
+
 # tmux
 alias tnew="new-tmux-from-dir-name"
 alias tatt="tmux attach-session -t "
@@ -38,11 +42,13 @@ alias td="tmux detach"
 alias tls="tmux ls"
 alias tkill="tmux kill-session -t "
 alias tmk='tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-session -t {}'
+alias open='reattach-to-user-namespace open'
 
 function new-tmux-from-dir-name {
   tmux new-session -As `basename $PWD`
 }
 
+# Watson shortcuts and functions
 alias wat="start-watson-from-dir-name"
 
 function start-watson-from-dir-name {
@@ -55,13 +61,12 @@ alias pacser="pacman -Ss"
 alias aptin="sudo apt-get install"
 alias aptser="sduo apt-cache search"
 
-# github local repos
-alias dev="cd ~/_dev"
-
 # Ezpz
 alias c="clear"
 alias purge="sudo purge"
 
+
+# Paths
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
