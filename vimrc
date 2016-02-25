@@ -33,6 +33,9 @@ Plugin 'junegunn/goyo.vim'
 " Snippets
 Plugin 'SirVer/ultisnips'
 
+" Commentary
+Plugin 'tpope/vim-commentary'
+
 call vundle#end()
 filetype plugin indent on
 " End vundle plugins
@@ -135,7 +138,7 @@ nnoremap <C-L> <C-W><C-L>
 :imap <C-[> <Esc>
 
 " Clear search highligh on esc
-nnoremap <esc> :noh<return><esc>
+nnoremap <silent> <Leader>/ :nohlsearch<CR>
 
 " Better line movement
 :nmap j gj
@@ -184,3 +187,10 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 set runtimepath+=~/.vim/ultisnips_rep
+
+
+" Auto load vimrc on save
+augroup reload_vimrc " {
+  autocmd!
+  autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END " }

@@ -9,36 +9,45 @@ snippet himage
 }
 endsnippet
 
-snippet fimage
+snippet row
 {
-	"src": "<%= config.imgsrc %>$1",
-	"class": "mobile-300",
-	"width": "600",
-	"height": "$4",
-	"title": "$2",
-	"link": "<% links.$1.url %>",
-	"type": "image"
+	"bgcolor": "${1:#ffffff}",
+	"cols": [{
+		$0
+	}]
 }
 endsnippet
 
-snippet link
-"$1": {
-	"url": "link"
-},
+snippet col
+"align": "$1",
+"width": "${2:295}",
+"class": "${3:mobile-300}",
+"pods": [{
+	"width": "$2",
+	"class": "$3",
+	"parts": [{
+		$0
+	]}
+}]
 endsnippet
 
-snippet text
-{
-	"class": "mobile-300",
-	"width": "265",
-	"padding": "15",
-	"height": "100",
-	"bgcolor": "#ffffff",
-	"color": "#000000",
-	"size": "16",
-	"weight": "bold",
-	"text": "$1",
-	"customstyles": "text-align:center;",
-	"type" : "text"
-}
+snippet wid
+"width": "${1:600}",
+endsnippet
+
+snippet class
+"class": "${1:mobile-300}",
+endsnippet
+
+snippet custom
+"customstyles": "$1",
+endsnippet
+
+snippet img
+"src": "<%= config.imgsrc %>$1",
+"colspan": "${2:1}",
+"height": "$3",
+"title": "$4",
+"link": "<% links.$1.url %>",
+"type": "image"
 endsnippet
