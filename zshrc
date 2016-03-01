@@ -60,7 +60,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH="/usr/local/heroku/bin:$PATH"
 
 # Node modules
-export NODE_PATH="/Users/dannywilson/.node/lib/node_modules"
+export NODE_PATH="/usr/local/lib/node_modules/:/Users/dannywilson/.node/lib/node_modules"
 export PATH="/Users/dannywilson/.node/bin/:$PATH"
 
 # Base16 Shell
