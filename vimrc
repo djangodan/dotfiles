@@ -39,6 +39,9 @@ Plugin 'tpope/vim-commentary'
 " vim-surround
 Plugin 'tpope/vim-surround'
 
+" React
+Plugin 'mxw/vim-jsx'
+
 
 call vundle#end()
 filetype plugin indent on
