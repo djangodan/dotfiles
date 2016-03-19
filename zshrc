@@ -84,7 +84,4 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
 export ANDROID_HOME=/Users/dannywilson/Library/Android/sdk
 export PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$PATH"
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 eval "$(docker-machine env default)"
