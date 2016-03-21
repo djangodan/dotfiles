@@ -18,6 +18,10 @@ plugins=(git bower brew gem npm osx pip sudo vagrant virtualenvwrapper web-searc
 
 source $ZSH/oh-my-zsh.sh
 
+# iTerm colours
+export CLICOLOR=1
+export TERM=xterm-256color
+
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
