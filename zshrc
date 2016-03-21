@@ -2,7 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 GOPATH="$HOME"
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/directory-you-do-development-in
+export PROJECT_HOME=$HOME/_dev
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Set name of the theme to load.
@@ -82,7 +82,7 @@ export NODE_PATH="/usr/local/lib/node_modules/:/Users/dannywilson/.node/lib/node
 export PATH="/Users/dannywilson/.node/bin/:$PATH"
 
 # Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
+BASE16_SHELL="$HOME/.config/base16-shell/base16-ocean.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 export ANDROID_HOME=/Users/dannywilson/Library/Android/sdk
