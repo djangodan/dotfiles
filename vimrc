@@ -19,6 +19,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'mxw/vim-jsx'
+Plugin 'Raimondi/delimitMate'
 
 call vundle#end()
 filetype plugin indent on
