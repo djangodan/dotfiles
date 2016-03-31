@@ -6,42 +6,19 @@ call vundle#begin()
 
 " Vundle Plugins
 Plugin 'VundleVim/Vundle.vim'
-
-" Base16 plugin
 Plugin 'chriskempson/base16-vim'
-
-" Emmet plugin
 Plugin 'mattn/emmet-vim'
-
-" Ctrlp plugin
 Plugin 'kien/ctrlp.vim'
-
-" Airlin plugin
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-
-" Tmuxline plugin
 Plugin 'edkolev/tmuxline.vim'
-
-" Markdown syntax
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
-
-" goyo
 Plugin 'junegunn/goyo.vim'
-
-" Snippets
 Plugin 'SirVer/ultisnips'
-
-" Commentary
 Plugin 'tpope/vim-commentary'
-
-" vim-surround
 Plugin 'tpope/vim-surround'
-
-" React
 Plugin 'mxw/vim-jsx'
-
 
 call vundle#end()
 filetype plugin indent on
