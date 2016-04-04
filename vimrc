@@ -20,6 +20,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'mxw/vim-jsx'
 Plugin 'Raimondi/delimitMate'
+Plugin 'pangloss/vim-javascript'
 
 call vundle#end()
 filetype plugin indent on
