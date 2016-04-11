@@ -112,7 +112,11 @@ let g:airline_theme = 'base16_ocean'
 
 " Keymaps
 " Set leader to ,
-let mapleader=","
+let mapleader="\<Space>"
+
+" Save remap
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>q :bd<CR>
 
 " Better split movement
 nnoremap <C-J> <C-W><C-J>
