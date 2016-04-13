@@ -135,8 +135,8 @@ nmap j gj
 nmap k gk
 
 " Set buffer movement to ,x ,z
-nmap <Leader>x :bnext<CR>
-nmap <Leader>z :bprev<CR>
+nmap <Leader>p :bnext<CR>
+nmap <Leader>o :bprev<CR>
 
 " No arrow keys
 nnoremap <up> <nop>
