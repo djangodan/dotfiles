@@ -1,27 +1,30 @@
-autoconf
-automake
-brew-cask
-git
-jpeg
-libevent
-libgpg-error
-libksba
-libpng
-libtiff
-libtool
-libyaml
-little-cms2
-mercurial
-mongodb
-nmap
-node
-openssl
-pkg-config
-postgresql
-readline
-reattach-to-user-namespace
-tig
-tmux
-webp
-wget
-xz
+brew "zsh"
+brew "python"
+brew "vim"
+brew "git"
+brew "postgresql"
+brew "reattach-to-user-namespace"
+brew "tmux"
+brew "wget"
+brew "tig"
+brew "node"
+
+brew "autoconf"
+brew "automake"
+brew "jpeg"
+brew "libevent"
+brew "libgpg-error"
+brew "libksba"
+brew "libpng"
+brew "libtiff"
+brew "libtool"
+brew "libyaml"
+brew "little-cms2"
+brew "mercurial"
+brew "mongodb"
+brew "nmap"
+brew "openssl"
+brew "pkg-config"
+brew "readline"
+brew "webp"
+brew "xz"
