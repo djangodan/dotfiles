@@ -111,7 +111,7 @@ let g:airline_theme = 'base16_ocean'
 
 
 " Keymaps
-" Set leader to ,
+" Set leader to space
 let mapleader="\<Space>"
 
 " Save remap
