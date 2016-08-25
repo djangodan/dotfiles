@@ -95,6 +95,7 @@ set backspace=indent,eol,start
 
 " Show command in status bar
 set showcmd
+
 " Better line break on 7.4
 set breakindent
 set regexpengine=1
@@ -114,9 +115,15 @@ let g:airline_theme = 'base16_ocean'
 " Set leader to space
 let mapleader="\<Space>"
 
-" Save remap
+" Save 
 nnoremap <Leader>w :w<CR>
+
+" Close buffer
 nnoremap <Leader>q :bd<CR>
+
+" Set buffer movement to ,x ,z
+nmap <Leader>p :bnext<CR>
+nmap <Leader>o :bprev<CR>
 
 " Better split movement
 nnoremap <C-J> <C-W><C-J>
@@ -125,7 +132,7 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <C-L> <C-W><C-L>
 
 " Esc with ctrl [
-:imap <C-[> <Esc>
+imap <C-[> <Esc>
 
 " Clear search highligh on esc
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
@@ -133,10 +140,6 @@ nnoremap <silent> <Leader>/ :nohlsearch<CR>
 " Better line movement
 nmap j gj
 nmap k gk
-
-" Set buffer movement to ,x ,z
-nmap <Leader>p :bnext<CR>
-nmap <Leader>o :bprev<CR>
 
 " No arrow keys
 nnoremap <up> <nop>
