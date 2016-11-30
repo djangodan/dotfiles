@@ -115,6 +115,9 @@ let g:airline_theme = 'base16_ocean'
 " Set leader to space
 let mapleader="\<Space>"
 
+" remove ctrlp for insert
+inoremap <C-p> <Nop>
+
 " Save 
 nnoremap <Leader>w :w<CR>
 
