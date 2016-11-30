@@ -155,7 +155,7 @@ vmap  r "_dP
 
 " Ignore files on ctrlp
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$|node_modules',
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$|node_modules$|htmlcov',
   \ 'file': '\v\.(exe|so|dll|pyc)$',
   \ }
 
