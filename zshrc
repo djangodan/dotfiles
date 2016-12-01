@@ -37,7 +37,8 @@ alias cemail="cat dist/index.html | pbcopy"
 alias bower="noglob bower"
 
 # Vim
-alias vim="/usr/local/bin/vim"
+# alias vim="/usr/local/bin/vim"
+alias vim="mvim -v"
 
 # tmux
 alias tnew="new-tmux-from-dir-name"

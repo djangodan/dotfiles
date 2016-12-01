@@ -21,6 +21,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'mxw/vim-jsx'
 Plugin 'Raimondi/delimitMate'
 Plugin 'pangloss/vim-javascript'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 filetype plugin indent on
@@ -188,3 +189,7 @@ augroup reload_vimrc " {
   autocmd!
   autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END " }
+
+
+" YouCompleteMe
+let g:ycm_python_binary_path = '/usr/local/bin/python'
