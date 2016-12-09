@@ -4,6 +4,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+
 " Vundle Plugins
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'chriskempson/base16-vim'
@@ -40,6 +41,9 @@ colorscheme base16-ocean
 
 " Hightlight cursor line
 set cursorline
+
+" Show ruler
+set colorcolumn=81
 
 " Show line numbers
 set number
