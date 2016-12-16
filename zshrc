@@ -14,7 +14,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git npm pip sudo virtualenvwrapper django)
+plugins=(git npm sudo virtualenvwrapper django)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -89,3 +89,46 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-ocean.dark.sh"
 export ANDROID_HOME=/Users/dannywilson/Library/Android/sdk
 export PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$PATH"
 
+
+# Docker
+function docker-start {
+  typeset vm=${1:-default} sts
+  case $vm in
+    -h|--help)
+      echo $'usage: docker-start [<vm>]\n\nEnsures that the specified/default Docker VM is started\nand the environment is initialized.'
+      return 0
+      ;;
+  esac
+  sts=$(docker-machine status "$vm") || return
+  [[ $sts == 'Running' ]] && echo "(Docker VM '$vm' is already running.)" || { 
+    echo "-- Starting Docker VM '$vm' (\`docker-machine start "$vm"\`; this will take a while)..."; 
+    docker-machine start "$vm" || return
+  }
+  echo "-- Setting DOCKER_* environment variables (\`eval \"\$(docker-machine env "$vm")\"\`)..."
+  eval "$(docker-machine env "$vm")" || return
+  export | grep -o 'DOCKER_.*'
+  echo "-- Docker VM '$vm' is running."
+}
+function docker-stop {
+  typeset vm=${1:-default} sts envVarNames fndx
+  case $vm in
+    -h|--help)
+      echo $'usage: docker-stop [<vm>]\n\nEnsures that the specified/default Docker VM is stopped\nand the environment is cleaned up.'
+      return 0
+      ;;
+  esac
+  sts=$(docker-machine status "$vm") || return
+  [[ $sts == 'Running' ]] && { 
+    echo "-- Stopping Docker VM '$vm' (\`docker-machine stop "$vm"\`)...";
+    docker-machine stop "$vm" || return
+  } || echo "(Docker VM '$vm' is not running.)"
+  [[ -n $BASH_VERSION ]] && fndx=3 || fndx=1 # Bash prefixes defs. wit 'declare -x '
+  envVarNames=( $(export | awk -v fndx="$fndx" '$fndx ~ /^DOCKER_/ { sub(/=.*/,"", $fndx); print $fndx }') )
+  if [[ -n $envVarNames ]]; then
+    echo "-- Unsetting DOCKER_* environment variables ($(echo "${envVarNames[@]}" | sed 's/ /, /g'))..."
+    unset "${envVarNames[@]}"
+  else
+    echo "(No DOCKER_* environment variables to unset.)"
+  fi
+  echo "-- Docker VM '$vm' is stopped."
+}
