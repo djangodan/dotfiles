@@ -30,87 +30,86 @@ Plugin 'tpope/vim-fugitive'
 call vundle#end()
 filetype plugin indent on
 " End vundle plugins
+"
 
+""""""""""""""""""""
+" appearance
+""""""""""""""""""""
 " Set background to dark
 set background=dark
-
 " Use 256 colours for theme
 let base16colorspace=256
-
 " Set theme to base16
 colorscheme base16-ocean
-
 " Hightlight cursor line
 set cursorline
-
 " Show ruler
 set colorcolumn=81
-
 " Show line numbers
 set number
-
-" No swap files
-set noswapfile
-
-" Set syntax on
-syntax on
-
-" Show cursor position at all times
-set ruler
-
-" Better redrawing
-set lazyredraw
-set ttyfast
-
-" Set scroll of to 15 lines
-set scrolloff=15
-
-" Ignore case while searching
-set ignorecase
-
-" Search as you type
-set incsearch
-
-" Highlight search
-set hlsearch
-
-" Enable smart indent
-set smartindent
-
-" Enable smart tabs
-set smarttab
-
-" Set tabs width to 2 spaces
-set tabstop=2
-
-" Set shift width to 2 spaces
-set shiftwidth=2
-
-" Set soft tabs to 2 spaces
-set softtabstop=2
-
-" Set expandtab
-set expandtab
-
-" Word wraps and line breaks
-set wrap
-
-" Break lines at break
-set linebreak
-
-" Normal backspace
-set backspace=indent,eol,start
-
 " Show command in status bar
 set showcmd
 
+
+
+""""""""""""""""""""
+" behaviour
+""""""""""""""""""""
+" Normal backspace
+set backspace=indent,eol,start
+" No swap files
+set noswapfile
+" Set syntax on
+syntax on
+" Show cursor position at all times
+set ruler
+" Better redrawing
+set lazyredraw
+set ttyfast
+" Set scroll of to 15 lines
+set scrolloff=15
+" Ignore case while searching
+set ignorecase
+" Word wraps and line breaks
+set wrap
+" Break lines at break
+set linebreak
 " Better line break on 7.4
 set breakindent
 set regexpengine=1
-
 " Better splitting
 set splitbelow
 set splitright
+
+
+
+""""""""""""""""""""
+" search
+""""""""""""""""""""
+" Search as you type
+set incsearch
+" Highlight search
+set hlsearch
+
+
+
+""""""""""""""""""""
+" indent
+""""""""""""""""""""
+" Enable smart indent
+set smartindent
+" Enable smart tabs
+set smarttab
+" Set tabs width to 2 spaces
+set tabstop=2
+" Set shift width to 2 spaces
+set shiftwidth=2
+" Set soft tabs to 2 spaces
+set softtabstop=2
+" Set expandtab
+set expandtab
+
+
 
 " Airline settings
 set laststatus=2
@@ -119,7 +118,9 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_theme = 'base16_ocean'
 
 
-" Keymaps
+""""""""""""""""""""
+" keymaps
+""""""""""""""""""""
 " Set leader to space
 let mapleader="\<Space>"
 
@@ -132,7 +133,7 @@ nnoremap <Leader>w :w<CR>
 " Close buffer
 nnoremap <Leader>q :bd<CR>
 
-" Set buffer movement to ,x ,z
+" Set buffer movement to ,o ,p
 nmap <Leader>p :bnext<CR>
 nmap <Leader>o :bprev<CR>
 
@@ -157,9 +158,6 @@ nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <right> <nop>
 nnoremap <left> <nop>
-
-" paste over selection
-vmap  r "_dP
 
 " Ignore files on ctrlp
 let g:ctrlp_custom_ignore = {
