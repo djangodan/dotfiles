@@ -6,7 +6,7 @@ export PROJECT_HOME=$HOME/_dev
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Set name of the theme to load.
-ZSH_THEME="avit"
+ZSH_THEME="ys"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
