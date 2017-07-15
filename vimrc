@@ -23,7 +23,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'mxw/vim-jsx'
 Plugin 'Raimondi/delimitMate'
 Plugin 'pangloss/vim-javascript'
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-fugitive'
 
@@ -45,6 +45,7 @@ colorscheme base16-ocean
 set cursorline
 " Show ruler
 set colorcolumn=81
+set tw=80
 " Show line numbers
 set number
 " Show command in status bar
@@ -161,7 +162,7 @@ nnoremap <left> <nop>
 
 " Ignore files on ctrlp
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$|node_modules$|htmlcov',
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$|node_modules$|htmlcov$|venv',
   \ 'file': '\v\.(exe|so|dll|pyc)$',
   \ }
 
