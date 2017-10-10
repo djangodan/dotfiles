@@ -3,3 +3,48 @@ def test_${1:testing}(${2:self}):
 	${3:pass}
 endsnippet
 
+snippet ac "Assert contains" b
+self.assertContaines(${1:${VISUAL:expression}})
+endsnippet
+
+snippet ac "Assert not contains" b
+self.assertNotContaines(${1:${VISUAL:expression}})
+endsnippet
+
+snippet testcase "pyunit testcase" b
+class Test${1:Class}(${2:TestCase}):
+
+	`!p snip.rv = triple_quotes(snip)`${3:Test case docstring.}`!p snip.rv = triple_quotes(snip)`
+
+	def setUp(self):
+		${4:pass}
+
+	def tearDown(self):
+		${5:pass}
+
+	def test_${6:name}(self):
+		${7:${VISUAL:pass}}
+endsnippet
+
+# Django snippets
+
+snippet render "return render" n
+return render(
+						request,
+						'${1:template}',
+						${2:context}
+				)
+endsnippet
+
+snippet cbv "class based view" n
+class ${1:what}View(${2:View}):
+		"""
+		${3:document view}
+		"""
+
+		def get(self, request):
+				{$4:pass}
+
+		def post(self, request):
+				{$5:pass}
+endsnippet
