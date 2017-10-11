@@ -201,7 +201,7 @@ nnoremap <C-H> <C-W><C-H>
 nnoremap <C-L> <C-W><C-L>
 
 " Esc with ctrl [
-imap <C-[> <Esc>
+imap jk <Esc>
 
 " Clear search highligh on esc
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
