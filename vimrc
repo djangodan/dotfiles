@@ -47,7 +47,6 @@ colorscheme base16-ocean
 set cursorline
 " Show ruler
 set colorcolumn=81
-set tw=80
 " Show line numbers
 set number
 " Show command in status bar
@@ -71,8 +70,6 @@ set lazyredraw
 set ttyfast
 " Set scroll of to 15 lines
 set scrolloff=15
-" Ignore case while searching
-set ignorecase
 " Word wraps and line breaks
 set wrap
 " Break lines at break
@@ -85,7 +82,6 @@ set splitbelow
 set splitright
 
 
-
 """"""""""""""""""""
 " search
 """"""""""""""""""""
@@ -93,6 +89,9 @@ set splitright
 set incsearch
 " Highlight search
 set hlsearch
+" Ignore case while searching
+set ignorecase
+set smartcase
 
 
 
