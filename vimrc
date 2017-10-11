@@ -114,53 +114,15 @@ set expandtab
 
 
 
+""""""""""""""""""""
+" plugin settings
+""""""""""""""""""""
+" Enable smart indent
 " Airline settings
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_theme = 'base16_ocean'
-
-
-""""""""""""""""""""
-" keymaps
-""""""""""""""""""""
-" Set leader to space
-let mapleader="\<Space>"
-
-" remove ctrlp for insert
-inoremap <C-p> <Nop>
-
-" Save 
-nnoremap <Leader>w :w<CR>
-
-" Close buffer
-nnoremap <Leader>q :bd<CR>
-
-" Set buffer movement to ,o ,p
-nmap <Leader>p :bnext<CR>
-nmap <Leader>o :bprev<CR>
-
-" Better split movement
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-H> <C-W><C-H>
-nnoremap <C-L> <C-W><C-L>
-
-" Esc with ctrl [
-imap <C-[> <Esc>
-
-" Clear search highligh on esc
-nnoremap <silent> <Leader>/ :nohlsearch<CR>
-
-" Better line movement
-nmap j gj
-nmap k gk
-
-" No arrow keys
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <right> <nop>
-nnoremap <left> <nop>
 
 " Ignore files on ctrlp
 let g:ctrlp_custom_ignore = {
@@ -209,3 +171,54 @@ let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>""
 set runtimepath+=~/.vim/ultisnips_rep
+
+" delimitmate
+let delimitMate_expand_cr = 1
+
+
+""""""""""""""""""""
+" keymaps
+""""""""""""""""""""
+" Set leader to space
+let mapleader="\<Space>"
+
+" remove ctrlp for insert
+inoremap <C-p> <nop>
+
+" Save 
+nnoremap <Leader>w :w<CR>
+
+" Close buffer
+nnoremap <Leader>q :bd<CR>
+
+" Set buffer movement to ,o ,p
+nmap <Leader>p :bnext<CR>
+nmap <Leader>o :bprev<CR>
+
+" Better split movement
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-L> <C-W><C-L>
+
+" Esc with ctrl [
+imap <C-[> <Esc>
+
+" Clear search highligh on esc
+nnoremap <silent> <Leader>/ :nohlsearch<CR>
+
+" Better line movement
+nmap j gj
+nmap k gk
+
+" No arrow keys
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <right> <nop>
+nnoremap <left> <nop>
+
+" fugative remaps
+nmap <C-g>s :Gstatus<CR>
+nmap <C-g>c :Gcommit<CR>
+nmap <C-g>d :Gdiff<CR>
+
