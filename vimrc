@@ -188,7 +188,7 @@ inoremap <C-p> <nop>
 nnoremap <Leader>w :w<CR>
 
 " Close buffer
-nnoremap <Leader>q :bd<CR>
+nnoremap <Leader>q :w<CR>:bd<CR>
 
 " Set buffer movement to ,o ,p
 nmap <Leader>p :bnext<CR>
@@ -200,7 +200,7 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-L> <C-W><C-L>
 
-" Esc with ctrl [
+" Esc with jk
 imap jk <Esc>
 
 " Clear search highligh on esc
@@ -220,4 +220,6 @@ nnoremap <left> <nop>
 nmap <C-g>s :Gstatus<CR>
 nmap <C-g>c :Gcommit<CR>
 nmap <C-g>d :Gdiff<CR>
+nmap <C-g>r :Gread<CR>
+nmap <C-g>w :Gwrite<CR>
 
