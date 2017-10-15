@@ -189,7 +189,8 @@ inoremap <C-p> <nop>
 nnoremap <Leader>w :w<CR>
 
 " Close buffer
-nnoremap <Leader>q :w<CR>:bd<CR>
+" nnoremap <Leader>q :w<CR>:bd<CR>
+nnoremap <Leader>q :bp\|bd! #<CR>
 
 " Set buffer movement to ,o ,p
 nmap <Leader>p :bnext<CR>
