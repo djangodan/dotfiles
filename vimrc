@@ -1,4 +1,4 @@
-" Set up vundle
+"Set up vundle
 set nocompatible
 filetype off 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -192,6 +192,9 @@ nnoremap <Leader>w :w<CR>
 " nnoremap <Leader>q :w<CR>:bd<CR>
 nnoremap <Leader>q :bp\|bd! #<CR>
 
+" Close window
+nnoremap <Leader>x <C-w>c
+
 " Set buffer movement to ,o ,p
 nmap <Leader>p :bnext<CR>
 nmap <Leader>o :bprev<CR>
@@ -219,9 +222,8 @@ nnoremap <right> <nop>
 nnoremap <left> <nop>
 
 " fugative remaps
-nmap <C-g>s :Gstatus<CR>
-nmap <C-g>c :Gcommit<CR>
-nmap <C-g>d :Gdiff<CR>
-nmap <C-g>r :Gread<CR>
-nmap <C-g>w :Gwrite<CR>
+nmap <Leader>gs :Gstatus<CR>
+nmap <Leader>gd :Gdiff<CR>
+nmap <Leader>gr :Gread<CR>
+nmap <Leader>gw :Gwrite<CR>
 
