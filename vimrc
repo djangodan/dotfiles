@@ -21,6 +21,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'mxw/vim-jsx'
+Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'Raimondi/delimitMate'
 Plugin 'pangloss/vim-javascript'
 Plugin 'Valloric/YouCompleteMe'
@@ -42,7 +43,7 @@ set background=dark
 " Use 256 colours for theme
 let base16colorspace=256
 " Set theme to base16
-colorscheme base16-ocean
+colorscheme base16-eighties
 " Hightlight cursor line
 set cursorline
 " Show ruler
