@@ -1,5 +1,7 @@
 brew "zsh"
 brew "python"
+brew "python3"
+brew "yarn"
 brew "vim"
 brew "git"
 brew "postgresql"
