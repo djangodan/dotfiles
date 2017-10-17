@@ -210,6 +210,9 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-L> <C-W><C-L>
 
+" replace selection with clipboard
+vmap <Leader>v d"*P
+
 " Esc with jk
 imap jk <Esc>
 
