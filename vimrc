@@ -198,6 +198,7 @@ nnoremap <Leader>x <C-w>c
 " Set buffer movement to ,o ,p
 nmap <Leader>p :bnext<CR>
 nmap <Leader>o :bprev<CR>
+nmap <Leader>b :CtrlPBuffer<CR>
 
 " Better split movement
 nnoremap <C-J> <C-W><C-J>
