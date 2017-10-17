@@ -7,27 +7,31 @@ call vundle#begin()
 
 " Vundle Plugins
 Plugin 'VundleVim/Vundle.vim'
+" Display
 Plugin 'chriskempson/base16-vim'
-Plugin 'mattn/emmet-vim'
-Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'edkolev/tmuxline.vim'
-" Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-" Plugin 'junegunn/goyo.vim'
+Plugin 'airblade/vim-gitgutter'
+" Shortcuts
+Plugin 'mattn/emmet-vim'
+Plugin 'kien/ctrlp.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
-Plugin 'mxw/vim-jsx'
-Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'Raimondi/delimitMate'
-Plugin 'pangloss/vim-javascript'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
+" Syntax
+Plugin 'plasticboy/vim-markdown'
+Plugin 'mxw/vim-jsx'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'pangloss/vim-javascript'
+" Shit
+" Plugin 'junegunn/goyo.vim'
+" Plugin 'godlygeek/tabular'
 
 
 call vundle#end()
@@ -224,6 +228,7 @@ nnoremap <left> <nop>
 
 " fugative remaps
 nmap <Leader>gs :Gstatus<CR>
+nmap <Leader>gc :Gcommit<CR>
 nmap <Leader>gd :Gdiff<CR>
 nmap <Leader>gr :Gread<CR>
 nmap <Leader>gw :Gwrite<CR>
