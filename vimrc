@@ -29,6 +29,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'mxw/vim-jsx'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'pangloss/vim-javascript'
+Plugin 'w0rp/ale'
 " Shit
 " Plugin 'junegunn/goyo.vim'
 " Plugin 'godlygeek/tabular'
@@ -128,6 +129,9 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
 let g:airline_theme = 'base16_ocean'
 
+" show ale in status
+let g:airline#extensions#ale#enabled = 1
+
 " Ignore files on ctrlp
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$|node_modules$|htmlcov$|venv',
@@ -209,6 +213,11 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-H> <C-W><C-H>
 nnoremap <C-L> <C-W><C-L>
+
+" ale movements
+nmap <Leader>an :ALENext<CR>
+nmap <Leader>ap :ALEPrevious<CR>
+nmap <Leader>aa :ALEToggle<CR>
 
 " replace selection with clipboard
 vmap <Leader>v d"*P
