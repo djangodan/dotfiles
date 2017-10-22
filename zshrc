@@ -26,9 +26,10 @@ export TERM=xterm-256color
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # File system shortcuts
-alias dev="cd ~/_dev"
-alias bjl="cd ~/_bjl"
-alias writing="cd ~/Dropbox/writting"
+alias dev="cd ~/dev"
+alias bjl="cd ~/dev/_clients/bjl"
+alias hala="cd ~/dev/hala"
+alias writing="cd ~/Google\ Drive/writting"
 
 # Email shortcuts
 alias cemail="cat dist/index.html | pbcopy"
@@ -51,13 +52,6 @@ alias open='reattach-to-user-namespace open'
 
 function new-tmux-from-dir-name {
   tmux new-session -As `basename $PWD`
-}
-
-# Watson shortcuts and functions
-alias wat="start-watson-from-dir-name"
-
-function start-watson-from-dir-name {
-  watson start `basename $PWD`
 }
 
 # Rpi alias
