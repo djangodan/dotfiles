@@ -201,7 +201,7 @@ nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :bp\|bd! #<CR>
 
 " Close window
-nnoremap <Leader>x :w<CR><C-w>c
+nnoremap <Leader>x <C-w>c
 
 " Set buffer movement to ,o ,p
 nmap <Leader>p :bnext<CR>
