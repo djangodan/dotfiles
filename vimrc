@@ -203,6 +203,9 @@ nnoremap <Leader>q :bp\|bd! #<CR>
 " Close window
 nnoremap <Leader>x <C-w>c
 
+" Don't remove indent from #
+inoremap # X<C-H>#
+
 " Set buffer movement to ,o ,p
 nmap <Leader>p :bnext<CR>
 nmap <Leader>o :bprev<CR>
