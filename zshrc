@@ -29,6 +29,7 @@ export TERM=xterm-256color
 # python
 alias python="python3"
 alias pip="pip3"
+export PIP_REQUIRE_VIRTUALENV=false
 
 # File system shortcuts
 alias dev="cd ~/dev"
