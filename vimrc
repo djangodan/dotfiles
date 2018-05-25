@@ -13,6 +13,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'junegunn/goyo.vim'
 " Shortcuts
 Plugin 'mattn/emmet-vim'
 Plugin 'kien/ctrlp.vim'
@@ -31,7 +32,6 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'pangloss/vim-javascript'
 Plugin 'w0rp/ale'
 " Shit
-" Plugin 'junegunn/goyo.vim'
 " Plugin 'godlygeek/tabular'
 
 
