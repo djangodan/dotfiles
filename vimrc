@@ -15,27 +15,28 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'edkolev/tmuxline.vim'
-Plugin 'airblade/vim-gitgutter'
 Plugin 'junegunn/goyo.vim'
 " Shortcuts
 Plugin 'mattn/emmet-vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'Raimondi/delimitMate'
+Plugin 'rking/ag.vim'
+" utils
+Plugin 'airblade/vim-gitgutter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ervandew/supertab'
-Plugin 'tpope/vim-fugitive'
-Plugin 'rking/ag.vim'
-Plugin 'scrooloose/nerdtree'
 " Syntax
+Plugin 'w0rp/ale'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'mxw/vim-jsx'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'pangloss/vim-javascript'
-Plugin 'w0rp/ale'
 " Shit
 " Plugin 'godlygeek/tabular'
 
@@ -136,6 +137,9 @@ let g:airline_theme = 'base16_solarized'
 
 " show ale in status
 let g:airline#extensions#ale#enabled = 1
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
 " Ignore files on ctrlp
 let g:ctrlp_custom_ignore = {
