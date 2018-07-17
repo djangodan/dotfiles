@@ -29,6 +29,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-fugitive'
 Plugin 'rking/ag.vim'
+Plugin 'scrooloose/nerdtree'
 " Syntax
 Plugin 'plasticboy/vim-markdown'
 Plugin 'mxw/vim-jsx'
@@ -153,7 +154,6 @@ let g:tmuxline_separators = {
 
 " Better Netrw
 let g:netrw_liststyle=3
-map <leader>e :Explore<cr>
 
 " Markdown settings
 let g:vim_markdown_folding_disabled = 1
@@ -207,6 +207,10 @@ nnoremap <Leader>q :bp\|bd! #<CR>
 
 " Close window
 nnoremap <Leader>x <C-w>c
+
+" nerdtree remaps
+nmap <Leader>f :NERDTreeToggle<Enter>
+nmap <silent> <Leader>F :NERDTreeFind<CR>
 
 " Don't remove indent from #
 inoremap # X<C-H>#
