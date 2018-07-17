@@ -83,7 +83,7 @@ export NODE_PATH="/usr/local/lib/node_modules/:/Users/dannywilson/.node/lib/node
 export PATH="/Users/dannywilson/.node/bin:$PATH"
 
 # Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/base16-eighties.sh"
+BASE16_SHELL="$HOME/.config/base16-shell/base16-solarized-dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 export ANDROID_HOME=/Users/dannywilson/Library/Android/sdk

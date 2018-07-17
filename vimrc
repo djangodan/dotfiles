@@ -4,6 +4,9 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" silence python
+silent! py3 pass
+
 
 " Vundle Plugins
 Plugin 'VundleVim/Vundle.vim'
@@ -25,6 +28,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-fugitive'
+Plugin 'rking/ag.vim'
 " Syntax
 Plugin 'plasticboy/vim-markdown'
 Plugin 'mxw/vim-jsx'
@@ -127,7 +131,7 @@ set expandtab
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_theme = 'base16_ocean'
+let g:airline_theme = 'base16_solarized'
 
 " show ale in status
 let g:airline#extensions#ale#enabled = 1
@@ -165,6 +169,7 @@ augroup END " }
 
 " YouCompleteMe
 let g:ycm_python_binary_path = '/usr/local/bin/python'
+map <F3> :YcmCompleter GoTo<CR>
 
 " Snippets dir
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "mycoolsnippets"] 
