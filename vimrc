@@ -31,6 +31,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ervandew/supertab'
+Plugin 'janko-m/vim-test'
 " Syntax
 Plugin 'w0rp/ale'
 Plugin 'plasticboy/vim-markdown'
@@ -192,6 +193,16 @@ set runtimepath+=~/.vim/ultisnips_rep
 " delimitmate
 let delimitMate_expand_cr = 1
 
+
+" vim-test
+" TODO: add vagrant ssh commands
+" TODO: move to project specfic
+function! GStrategy(cmd)
+  echo '' . a:cmd
+endfunction
+
+let g:test#custom_strategies = {'G': function('GStrategy')}
+let g:test#strategy = 'G'
 
 """"""""""""""""""""
 " keymaps
