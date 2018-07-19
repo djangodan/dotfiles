@@ -24,6 +24,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'Raimondi/delimitMate'
 Plugin 'rking/ag.vim'
 " utils
+Plugin 'benmills/vimux'
+Plugin 'tpope/vim-dispatch'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
@@ -197,8 +199,20 @@ let delimitMate_expand_cr = 1
 " vim-test
 " TODO: add vagrant ssh commands
 " TODO: move to project specfic
+let test#python#runner = 'djangotest'
+let test#project_root = "/Users/wilsonda9admin/_dev/fde/apps/funeral-director-frontend/server"
+
 function! GStrategy(cmd)
-  echo '' . a:cmd
+  let vagrant_test_cmd = 'vagrant ssh -c "workon funeral-director-frontend && '.a:cmd.'"'
+  if exists('g:test#preserve_screen') && !g:test#preserve_screen
+    if exists('g:VimuxRunnerIndex') && _VimuxHasRunner(g:VimuxRunnerIndex) != -1
+      call VimuxRunCommand(!s:Windows() ? 'clear' : 'cls')
+      call VimuxClearRunnerHistory()
+    endif
+    call VimuxRunCommand(vagrant_test_cmd)
+  else
+    call VimuxRunCommand(vagrant_test_cmd)
+  endif
 endfunction
 
 let g:test#custom_strategies = {'G': function('GStrategy')}
