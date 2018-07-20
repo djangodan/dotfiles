@@ -197,8 +197,6 @@ let delimitMate_expand_cr = 1
 
 
 " vim-test
-let test#python#runner = 'djangotest'
-let test#project_root = "/Users/wilsonda9admin/_dev/fde/apps/funeral-director-frontend/server"
 
 function! GStrategy(cmd)
   let vagrant_test_cmd = 'vagrant ssh -c "workon funeral-director-frontend && '.a:cmd.'"'
@@ -213,8 +211,18 @@ function! GStrategy(cmd)
   endif
 endfunction
 
-let g:test#custom_strategies = {'G': function('GStrategy')}
-let g:test#strategy = 'G'
+function! SetupEnvironment()
+  let l:path = expand('%:p')
+  if l:path =~ '/Users/wilsonda9admin/_dev/fde'
+    let test#python#runner = 'djangotest'
+    let test#project_root = "/Users/wilsonda9admin/_dev/fde/apps/funeral-director-frontend/server"
+    let g:test#custom_strategies = {'G': function('GStrategy')}
+    let g:test#strategy = 'G'
+  else
+  endif
+endfunction
+autocmd! BufReadPost,BufNewFile * call SetupEnvironment()
+
 
 """"""""""""""""""""
 " keymaps
