@@ -4,6 +4,9 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" silence python
+silent! py3 pass
+
 
 " Vundle Plugins
 Plugin 'VundleVim/Vundle.vim'
@@ -12,26 +15,32 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'edkolev/tmuxline.vim'
-Plugin 'airblade/vim-gitgutter'
+Plugin 'junegunn/goyo.vim'
 " Shortcuts
 Plugin 'mattn/emmet-vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'Raimondi/delimitMate'
+Plugin 'rking/ag.vim'
+" utils
+Plugin 'benmills/vimux'
+Plugin 'tpope/vim-dispatch'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'ervandew/supertab'
-Plugin 'tpope/vim-fugitive'
+Plugin 'janko-m/vim-test'
 " Syntax
+Plugin 'w0rp/ale'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'mxw/vim-jsx'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'pangloss/vim-javascript'
-Plugin 'w0rp/ale'
 " Shit
-" Plugin 'junegunn/goyo.vim'
 " Plugin 'godlygeek/tabular'
 
 
@@ -48,7 +57,7 @@ set background=dark
 " Use 256 colours for theme
 let base16colorspace=256
 " Set theme to base16
-colorscheme base16-eighties
+colorscheme base16-solarized-dark
 " Hightlight cursor line
 set cursorline
 " Show ruler
@@ -127,7 +136,7 @@ set expandtab
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#fnamemod = ':t'
-let g:airline_theme = 'base16_ocean'
+let g:airline_theme = 'base16_solarized'
 
 " show ale in status
 let g:airline#extensions#ale#enabled = 1
@@ -150,7 +159,6 @@ let g:tmuxline_separators = {
 
 " Better Netrw
 let g:netrw_liststyle=3
-map <leader>e :Explore<cr>
 
 " Markdown settings
 let g:vim_markdown_folding_disabled = 1
@@ -166,6 +174,7 @@ augroup END " }
 
 " YouCompleteMe
 let g:ycm_python_binary_path = '/usr/local/bin/python'
+map <F3> :YcmCompleter GoTo<CR>
 
 " Snippets dir
 let g:UltiSnipsSnippetDirectories=["UltiSnips", "mycoolsnippets"] 
@@ -183,6 +192,34 @@ set runtimepath+=~/.vim/ultisnips_rep
 
 " delimitmate
 let delimitMate_expand_cr = 1
+
+
+" vim-test
+
+function! GStrategy(cmd)
+  let vagrant_test_cmd = 'vagrant ssh -c "workon funeral-director-frontend && '.a:cmd.'"'
+  if exists('g:test#preserve_screen') && !g:test#preserve_screen
+    if exists('g:VimuxRunnerIndex') && _VimuxHasRunner(g:VimuxRunnerIndex) != -1
+      call VimuxRunCommand(!s:Windows() ? 'clear' : 'cls')
+      call VimuxClearRunnerHistory()
+    endif
+    call VimuxRunCommand(vagrant_test_cmd)
+  else
+    call VimuxRunCommand(vagrant_test_cmd)
+  endif
+endfunction
+
+function! SetupEnvironment()
+  let l:path = expand('%:p')
+  if l:path =~ '/Users/wilsonda9admin/_dev/fde'
+    let test#python#runner = 'djangotest'
+    let test#project_root = "/Users/wilsonda9admin/_dev/fde/apps/funeral-director-frontend/server"
+    let g:test#custom_strategies = {'G': function('GStrategy')}
+    let g:test#strategy = 'G'
+  else
+  endif
+endfunction
+autocmd! BufReadPost,BufNewFile * call SetupEnvironment()
 
 
 """"""""""""""""""""
@@ -203,6 +240,10 @@ nnoremap <Leader>q :bp\|bd! #<CR>
 
 " Close window
 nnoremap <Leader>x <C-w>c
+
+" nerdtree remaps
+nmap <Leader>f :NERDTreeToggle<Enter>
+nmap <silent> <Leader>F :NERDTreeFind<CR>
 
 " Don't remove indent from #
 inoremap # X<C-H>#
@@ -231,6 +272,13 @@ imap jk <Esc>
 
 " Clear search highligh on esc
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
+
+" Test commands
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
 
 " Better line movement
 nmap j gj

@@ -1,6 +1,7 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 GOPATH="$HOME"
+export PATH=/usr/local/bin:$PATH
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/_dev
 source /usr/local/bin/virtualenvwrapper.sh
@@ -24,6 +25,11 @@ export TERM=xterm-256color
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# python
+alias python="python3"
+alias pip="pip3"
+export PIP_REQUIRE_VIRTUALENV=false
 
 # File system shortcuts
 alias dev="cd ~/dev"
@@ -77,7 +83,7 @@ export NODE_PATH="/usr/local/lib/node_modules/:/Users/dannywilson/.node/lib/node
 export PATH="/Users/dannywilson/.node/bin:$PATH"
 
 # Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/base16-eighties.dark.sh"
+BASE16_SHELL="$HOME/.config/base16-shell/base16-solarized-dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
 export ANDROID_HOME=/Users/dannywilson/Library/Android/sdk
