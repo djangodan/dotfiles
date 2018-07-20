@@ -197,8 +197,6 @@ let delimitMate_expand_cr = 1
 
 
 " vim-test
-" TODO: add vagrant ssh commands
-" TODO: move to project specfic
 let test#python#runner = 'djangotest'
 let test#project_root = "/Users/wilsonda9admin/_dev/fde/apps/funeral-director-frontend/server"
 
@@ -268,6 +266,13 @@ imap jk <Esc>
 
 " Clear search highligh on esc
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
+
+" Test commands
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
 
 " Better line movement
 nmap j gj
