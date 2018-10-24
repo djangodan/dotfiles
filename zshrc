@@ -70,10 +70,16 @@ alias aptser="sduo apt-cache search"
 alias c="clear"
 alias purge="sudo purge"
 
+# watch python and run green
+alias wgreen="find . -name '*.py' | entr green"
+
 
 # Paths
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+# direnv
+eval "$(direnv hook zsh)"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -132,3 +138,7 @@ function docker-stop {
   fi
   echo "-- Docker VM '$vm' is stopped."
 }
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
