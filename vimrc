@@ -9,8 +9,7 @@ silent! py3 pass
 
 
 " Vundle Plugins
-Plugin 'VundleVim/Vundle.vim'
-" Display
+Plugin 'VundleVim/Vundle.vim' " Display
 Plugin 'chriskempson/base16-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -126,6 +125,8 @@ set softtabstop=2
 " Set expandtab
 set expandtab
 
+" python tabs
+filetype indent plugin on
 
 
 """"""""""""""""""""
@@ -146,17 +147,17 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
 " Ignore files on ctrlp
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$|node_modules$|htmlcov$|venv',
-  \ 'file': '\v\.(exe|so|dll|pyc)$',
-  \ }
+      \ 'dir':  '\v[\/]\.(git|hg|svn)$|node_modules$|htmlcov$|venv',
+      \ 'file': '\v\.(exe|so|dll|pyc)$',
+      \ }
 
 " tmuxline seperators
 let g:tmuxline_separators = {
-    \ 'left' : '',
-    \ 'left_alt': '>',
-    \ 'right' : '',
-    \ 'right_alt' : '<',
-    \ 'space' : ' '}
+      \ 'left' : '',
+      \ 'left_alt': '>',
+      \ 'right' : '',
+      \ 'right_alt' : '<',
+      \ 'space' : ' '}
 
 
 " Better Netrw
@@ -197,9 +198,22 @@ let delimitMate_expand_cr = 1
 
 
 " vim-test
+let test#python#runner = 'pyunit'
+let test#strategy = "vimux"
+
+function! SetupEnvironment()
+  let l:path = expand('%:p')
+  if l:path =~ '/Users/wilsonda9admin/_dev/fde/apps/funeral-director-frontend/server'
+    let test#project_root = "/Users/wilsonda9admin/_dev/fde/apps/funeral-director-frontend/server"
+    let g:test#custom_strategies = {'G': function('GStrategy')}
+    let g:test#strategy = 'G'
+  else
+  endif
+endfunction
+autocmd! BufReadPost,BufNewFile * call SetupEnvironment()
 
 function! GStrategy(cmd)
-  let vagrant_test_cmd = 'vagrant ssh -c "workon funeral-director-frontend && '.a:cmd.'"'
+  let vagrant_test_cmd = "KEEP_DB='Y' ".a:cmd
   if exists('g:test#preserve_screen') && !g:test#preserve_screen
     if exists('g:VimuxRunnerIndex') && _VimuxHasRunner(g:VimuxRunnerIndex) != -1
       call VimuxRunCommand(!s:Windows() ? 'clear' : 'cls')
@@ -210,19 +224,6 @@ function! GStrategy(cmd)
     call VimuxRunCommand(vagrant_test_cmd)
   endif
 endfunction
-
-function! SetupEnvironment()
-  let l:path = expand('%:p')
-  if l:path =~ '/Users/wilsonda9admin/_dev/fde'
-    let test#python#runner = 'djangotest'
-    let test#project_root = "/Users/wilsonda9admin/_dev/fde/apps/funeral-director-frontend/server"
-    let g:test#custom_strategies = {'G': function('GStrategy')}
-    let g:test#strategy = 'G'
-  else
-  endif
-endfunction
-autocmd! BufReadPost,BufNewFile * call SetupEnvironment()
-
 
 """"""""""""""""""""
 " keymaps
@@ -278,7 +279,7 @@ nnoremap <silent> <Leader>/ :nohlsearch<CR>
 " Test commands
 nmap <silent> t<C-n> :TestNearest<CR>
 nmap <silent> t<C-f> :TestFile<CR>
-nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-a> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
 
