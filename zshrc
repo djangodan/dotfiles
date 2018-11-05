@@ -2,9 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 GOPATH="$HOME"
 export PATH=/usr/local/bin:$PATH
-export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/_dev
-source /usr/local/bin/virtualenvwrapper.sh
 
 # Set name of the theme to load.
 ZSH_THEME="ys"
@@ -15,7 +13,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git npm sudo virtualenvwrapper django)
+plugins=(git npm sudo django)
 
 source $ZSH/oh-my-zsh.sh
 
