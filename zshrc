@@ -81,8 +81,13 @@ export NODE_PATH="/usr/local/lib/node_modules/:/Users/dannywilson/.node/lib/node
 export PATH="/Users/dannywilson/.node/bin:$PATH"
 
 # Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/base16-solarized-dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+# BASE16_SHELL="$HOME/.config/base16-shell/base16-solarized-dark.sh"
+# [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 export ANDROID_HOME=/Users/dannywilson/Library/Android/sdk
 export PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$PATH"

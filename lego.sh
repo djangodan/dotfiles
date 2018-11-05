@@ -35,3 +35,8 @@ echo "Installing homebrew"
 echo "Installing brews from Brewfile"
 brew bundle
 
+# base16 bullshit
+echo "Cloning base16 shell"
+git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+echo "Cloning base16 iterm2"
+git clone https://github.com/martinlindhe/base16-iterm2.git
