@@ -239,10 +239,11 @@ nnoremap <Leader>w :w<CR>
 
 " Close buffer
 " nnoremap <Leader>q :w<CR>:bd<CR>
-nnoremap <Leader>q :bp\|bd! #<CR>
+" nnoremap <Leader>q :bp\|bd! #<CR>
+nnoremap <Leader>q :bd<CR>
 
 " Close window
-nnoremap <Leader>x <C-w>c
+nnoremap <Leader>x :close<CR>
 
 " nerdtree remaps
 nmap <Leader>f :NERDTreeToggle<Enter>
@@ -266,9 +267,6 @@ nnoremap <C-L> <C-W><C-L>
 nmap <Leader>an :ALENext<CR>
 nmap <Leader>ap :ALEPrevious<CR>
 nmap <Leader>aa :ALEToggle<CR>
-
-" replace selection with clipboard
-vmap <Leader>v d"*P
 
 " Esc with jk
 imap jk <Esc>
