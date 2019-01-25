@@ -24,6 +24,9 @@ export TERM=xterm-256color
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# emacs
+alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs "$@"'
+
 # python
 alias python="python3"
 alias pip="pip3"
