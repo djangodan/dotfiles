@@ -2,9 +2,7 @@
 ZSH=$HOME/.oh-my-zsh
 GOPATH="$HOME"
 export PATH=/usr/local/bin:$PATH
-export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/_dev
-source /usr/local/bin/virtualenvwrapper.sh
 
 # Set name of the theme to load.
 if [ -n "$INSIDE_EMACS" ]; then
@@ -19,7 +17,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git npm sudo virtualenvwrapper django)
+plugins=(git npm sudo django)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -29,6 +27,9 @@ export TERM=xterm-256color
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# emacs
+alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs "$@"'
 
 # python
 alias python="python3"
@@ -92,8 +93,13 @@ export NODE_PATH="/usr/local/lib/node_modules/:/Users/dannywilson/.node/lib/node
 export PATH="/Users/dannywilson/.node/bin:$PATH"
 
 # Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/base16-solarized-dark.sh"
-[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+# BASE16_SHELL="$HOME/.config/base16-shell/base16-solarized-dark.sh"
+# [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 export ANDROID_HOME=/Users/dannywilson/Library/Android/sdk
 export PATH="$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$PATH"

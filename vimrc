@@ -1,4 +1,4 @@
-"Set up vundle
+" Set up vundle
 set nocompatible
 filetype off 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -142,9 +142,7 @@ let g:airline_theme = 'base16_solarized'
 
 " show ale in status
 let g:airline#extensions#ale#enabled = 1
-let g:ale_echo_msg_error_str = 'E'
-let g:ale_echo_msg_warning_str = 'W'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let b:ale_linters = ['flake8']
 
 " Ignore files on ctrlp
 let g:ctrlp_custom_ignore = {
