@@ -7,7 +7,11 @@ export PROJECT_HOME=$HOME/_dev
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Set name of the theme to load.
-ZSH_THEME="ys"
+if [ -n "$INSIDE_EMACS" ]; then
+    export ZSH_THEME="rawsyntax"
+else
+    export ZSH_THEME="ys"
+fi
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
@@ -141,3 +145,7 @@ function docker-stop {
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+
+# added by travis gem
+[ -f /Users/wilsonda9admin/.travis/travis.sh ] && source /Users/wilsonda9admin/.travis/travis.sh
+export PATH="/usr/local/opt/node@10/bin:$PATH"

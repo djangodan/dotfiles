@@ -9,7 +9,8 @@ silent! py3 pass
 
 
 " Vundle Plugins
-Plugin 'VundleVim/Vundle.vim' " Display
+" Display
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -244,6 +245,9 @@ nnoremap <Leader>q :bd<CR>
 
 " Close window
 nnoremap <Leader>x :close<CR>
+
+" confirm quit all
+nnoremap <C-q>q :confirm qall
 
 " nerdtree remaps
 nmap <Leader>f :NERDTreeToggle<Enter>
