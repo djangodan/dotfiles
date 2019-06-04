@@ -5,7 +5,11 @@ export PATH=/usr/local/bin:$PATH
 export PROJECT_HOME=$HOME/_dev
 
 # Set name of the theme to load.
-ZSH_THEME="ys"
+if [ -n "$INSIDE_EMACS" ]; then
+    export ZSH_THEME="rawsyntax"
+else
+    export ZSH_THEME="ys"
+fi
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
@@ -29,7 +33,6 @@ alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs "$@"'
 
 # python
 alias python="python3"
-alias pip="pip3"
 export PIP_REQUIRE_VIRTUALENV=false
 
 # File system shortcuts
@@ -73,10 +76,15 @@ alias purge="sudo purge"
 
 # pyenv
 eval "$(pyenv init -)"
+# watch python and run green
+alias wgreen="find . -name '*.py' | entr green"
 
 # Paths
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
+# direnv
+eval "$(direnv hook zsh)"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -140,3 +148,11 @@ function docker-stop {
   fi
   echo "-- Docker VM '$vm' is stopped."
 }
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+# added by travis gem
+[ -f /Users/wilsonda9admin/.travis/travis.sh ] && source /Users/wilsonda9admin/.travis/travis.sh
+export PATH="/usr/local/opt/node@10/bin:$PATH"

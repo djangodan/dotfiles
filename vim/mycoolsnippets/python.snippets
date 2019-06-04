@@ -1,3 +1,8 @@
+# python debugger
+snippet pdb "python debugger set trace" b
+import pdb; pdb.set_trace()
+endsnippet
+
 snippet test "new test method" b
 def test_${1:testing}(${2:self}):
 	${3:pass}
