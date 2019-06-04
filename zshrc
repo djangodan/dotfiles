@@ -71,6 +71,8 @@ alias aptser="sduo apt-cache search"
 alias c="clear"
 alias purge="sudo purge"
 
+# pyenv
+eval "$(pyenv init -)"
 
 # Paths
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
