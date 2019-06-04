@@ -89,10 +89,6 @@ eval "$(direnv hook zsh)"
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-# Node modules
-export NODE_PATH="/usr/local/lib/node_modules/:/Users/dannywilson/.node/lib/node_modules"
-export PATH="/Users/dannywilson/.node/bin:$PATH"
-
 # Base16 Shell
 # BASE16_SHELL="$HOME/.config/base16-shell/base16-solarized-dark.sh"
 # [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
@@ -155,4 +151,4 @@ fi
 
 # added by travis gem
 [ -f /Users/wilsonda9admin/.travis/travis.sh ] && source /Users/wilsonda9admin/.travis/travis.sh
-export PATH="/usr/local/opt/node@10/bin:$PATH"
+export PATH="/usr/local/opt/node@9/bin:$PATH"
