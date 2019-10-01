@@ -57,7 +57,7 @@ set background=dark
 " Use 256 colours for theme
 let base16colorspace=256
 " Set theme to base16
-colorscheme base16-solarized-dark
+colorscheme base16-eighties
 " Hightlight cursor line
 set cursorline
 " Show ruler
