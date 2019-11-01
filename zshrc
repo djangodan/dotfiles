@@ -8,7 +8,7 @@ export PROJECT_HOME=$HOME/_dev
 if [ -n "$INSIDE_EMACS" ]; then
     export ZSH_THEME="rawsyntax"
 else
-    export ZSH_THEME="amuse"
+    export ZSH_THEME="bureau"
 fi
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
