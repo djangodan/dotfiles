@@ -108,6 +108,7 @@
 [mergetool]
   prompt = false
 [mergetool "vimdiff"]
+# TODO: move this over to emacs
   cmd="vim -c 'Gdiff' $MERGED"     # use fugitive.vim for 3-way merge
   keepbackup=false
 [merge]
