@@ -5,11 +5,13 @@ export PATH=/usr/local/bin:$PATH
 export PROJECT_HOME=$HOME/_dev
 
 # Set name of the theme to load.
-if [ -n "$INSIDE_EMACS" ]; then
-    export ZSH_THEME="rawsyntax"
-else
-    export ZSH_THEME="bureau"
+if [[ $TERM = dumb ]]; then
+  unset zle_bracketed_paste
+  prompt walters
+  unsetopt zle
 fi
+
+export ZSH_THEME="bureau"
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 COMPLETION_WAITING_DOTS="true"
