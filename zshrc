@@ -33,7 +33,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # emacs
-alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs "$@"'
+alias memacs='/Applications/Emacs.app/Contents/MacOS/Emacs "$@"'
 
 # python
 export PIP_REQUIRE_VIRTUALENV=false
