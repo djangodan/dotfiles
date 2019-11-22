@@ -54,7 +54,6 @@ alias td="tmux detach"
 alias tls="tmux ls"
 alias tkill="tmux kill-session -t "
 alias tmk='tmux ls | awk '{print $1}' | sed 's/://g' | xargs -I{} tmux kill-session -t {}'
-alias open='reattach-to-user-namespace open'
 
 function new-tmux-from-dir-name {
   tmux new-session -As `basename $PWD`
