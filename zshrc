@@ -64,6 +64,7 @@ alias c="clear"
 alias purge="sudo purge"
 
 # pyenv
+export PATH="/home/wilson/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 
 # direnv
