@@ -1,0 +1,76 @@
+" Set up vundle
+set nocompatible
+filetype off 
+
+" Hightlight cursor line
+set cursorline
+" Show ruler
+set colorcolumn=81
+highlight ColorColoumn ctermfg=grey
+" Show line numbers
+set number
+" Show command in status bar
+set showcmd
+
+
+" Normal backspace
+set backspace=indent,eol,start
+" No swap files
+set noswapfile
+" Set syntax on
+syntax on
+" Show cursor position at all times
+set ruler
+" Set scroll of to 25 lines
+set scrolloff=25
+" Word wraps and line breaks
+set wrap
+" Break lines at break
+set linebreak
+" Better line break on 7.4
+set breakindent
+set regexpengine=1
+
+""""""""""""""""""""
+" search
+""""""""""""""""""""
+" Search as you type
+set incsearch
+" Highlight search
+set hlsearch
+" Ignore case while searching
+set ignorecase
+set smartcase
+
+
+""""""""""""""""""""
+" indent
+""""""""""""""""""""
+set smartindent
+set smarttab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
+
+" python tabs
+filetype indent plugin on
+
+" Better split movement
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-L> <C-W><C-L>
+
+" Esc with jk
+imap jk <Esc>
+
+" Better line movement
+nmap j gj
+nmap k gk
+
+" No arrow keys
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <right> <nop>
+nnoremap <left> <nop>
