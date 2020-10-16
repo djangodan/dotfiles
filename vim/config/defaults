@@ -6,7 +6,7 @@ filetype off
 set cursorline
 " Show ruler
 set colorcolumn=81
-highlight ColorColoumn ctermfg=grey
+highlight ColorColoumn ctermfg=grey ctermbg=lightgrey
 " Show line numbers
 set number
 " Show command in status bar

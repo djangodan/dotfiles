@@ -1,0 +1,28 @@
+""""""""""""""""""""
+" keymaps
+""""""""""""""""""""
+" Set leader to space
+let mapleader="\<Space>"
+
+" Close buffer
+" nnoremap <Leader>q :w<CR>:bd<CR>
+" nnoremap <Leader>q :bp\|bd! #<CR>
+nnoremap <Leader>q :bd<CR>
+
+" Close window
+nnoremap <Leader>x :close<CR>
+
+" confirm quit all
+nnoremap <C-q>q :confirm qall
+
+
+" Don't remove indent from #
+inoremap # X<C-H>#
+
+" Set buffer movement to ,o ,p
+nmap <Leader>p :bnext<CR>
+nmap <Leader>o :bprev<CR>
+
+" Clear search highligh on esc
+nnoremap <silent> <Leader>/ :nohlsearch<CR>
+

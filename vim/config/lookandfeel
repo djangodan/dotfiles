@@ -4,9 +4,25 @@
 " Set background to dark
 set background=dark
 " Use 256 colours for theme
-let base16colorspace=256
+" let base16colorspace=256
 " Set theme to base16
-colorscheme base16-eighties
+" colorscheme base16-chalk
+autocmd vimenter * colorscheme gruvbox
+
+
+""""""""""""""""""""
+" netrw
+""""""""""""""""""""
+let g:netrw_banner = 0
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 2
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
+
+augroup ProjectDrawer
+  autocmd!
+  autocmd VimEnter * :Vexplore
+augroup END
 
 """"""""""""""""""""
 " behaviour
@@ -25,42 +41,8 @@ autocmd InsertEnter * :set number norelativenumber
 autocmd InsertLeave * :set relativenumber
 highlight LineNr ctermfg=darkgrey
 
-" Better Netrw
-let g:netrw_liststyle=3
-
-" Auto load vimrc on save
-augroup reload_vimrc " {
-  autocmd!
-  autocmd BufWritePost $MYVIMRC source $MYVIMRC
-augroup END " }
-" delimitmate
-let delimitMate_expand_cr = 1
-
 """"""""""""""""""""
-" keymaps
+" buftab
 """"""""""""""""""""
-" Set leader to space
-let mapleader="\<Space>"
-
-" Close buffer
-" nnoremap <Leader>q :w<CR>:bd<CR>
-" nnoremap <Leader>q :bp\|bd! #<CR>
-nnoremap <Leader>q :bd<CR>
-
-" Close window
-nnoremap <Leader>x :close<CR>
-
-" confirm quit all
-nnoremap <C-q>q :confirm qall
-
-
-" Don't remove indent from #
-inoremap # X<C-H>#
-
-" Set buffer movement to ,o ,p
-nmap <Leader>p :bnext<CR>
-nmap <Leader>o :bprev<CR>
-
-" Clear search highligh on esc
-nnoremap <silent> <Leader>/ :nohlsearch<CR>
-
+let g:buftabline_indicators=1
+let g:buftabline_separators=1
