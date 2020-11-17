@@ -2,14 +2,6 @@
 ZSH=$HOME/.oh-my-zsh
 GOPATH="$HOME"
 export PATH=/usr/local/bin:$PATH
-export PROJECT_HOME=$HOME/_dev
-
-# Set name of the theme to load.
-if [[ $TERM = dumb ]]; then
-  unset zle_bracketed_paste
-  prompt walters
-  unsetopt zle
-fi
 
 export ZSH_THEME="bureau"
 
@@ -19,7 +11,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(django docker docker-compose git heroku kubectl npm pipenv python pip ubuntu)
+plugins=(docker docker-compose git npm pipenv python pip)
 
 source $ZSH/oh-my-zsh.sh
 
