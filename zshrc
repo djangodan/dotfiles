@@ -28,9 +28,9 @@ export CLICOLOR=1
 export TERM=xterm-256color
 
 # ruby
-eval "$(rbenv init -)"
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+# eval "$(rbenv init -)"
+# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
 # emacs
 alias memacs='/Applications/Emacs.app/Contents/MacOS/Emacs "$@"'
@@ -68,7 +68,7 @@ export PATH="/home/wilson/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 
 # direnv
-eval "$(direnv hook zsh)"
+# eval "$(direnv hook zsh)"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"

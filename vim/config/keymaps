@@ -26,3 +26,12 @@ nmap <Leader>o :bprev<CR>
 " Clear search highligh on esc
 nnoremap <silent> <Leader>/ :nohlsearch<CR>
 
+" fzf
+nnoremap <silent> <leader>f :Files<CR>
+nnoremap <silent> <leader>b :Buffers<CR>
+nnoremap <silent> <leader>T :BTags<CR>
+nnoremap <silent> <leader>t :Tags<CR>
+
+" nerdtree remaps
+nmap <Leader>e :NERDTreeToggle<Enter>
+nmap <silent> <Leader>E :NERDTreeFind<CR>
