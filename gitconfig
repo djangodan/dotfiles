@@ -17,6 +17,9 @@
   aa = add -A                       # add all
   chunkyadd = add --patch           # stage commits chunk by chunk
 
+  # Fetch
+  fa = fetch --all
+
   # via http://blog.apiaxle.com/post/handy-git-tips-to-stop-you-getting-fired/
   snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
   snapshots = !git stash list --grep snapshot
@@ -40,6 +43,7 @@
 
   # checkout
   co = checkout                     # checkout
+  cot = checkout --track 
   nb = checkout -b                  # create and switch to a new branch (mnemonic: "git new branch branchname...")
 
   # cherry-pick
