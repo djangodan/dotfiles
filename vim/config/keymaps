@@ -35,3 +35,9 @@ nnoremap <silent> <leader>t :Tags<CR>
 " nerdtree remaps
 nmap <Leader>e :NERDTreeToggle<Enter>
 nmap <silent> <Leader>E :NERDTreeFind<CR>
+
+" fugative
+nmap <Leader>gs :Gstatus<Enter>
+nmap <Leader>gc :Gcommit<Enter>
+nmap <Leader>gw :Gwrite<Enter>
+nmap <Leader>gd :Gdiffsplit<Enter>
