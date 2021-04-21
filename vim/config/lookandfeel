@@ -4,10 +4,9 @@
 " Set background to dark
 set background=dark
 " Use 256 colours for theme
-" let base16colorspace=256
+let base16colorspace=256
 " Set theme to base16
-" colorscheme base16-chalk
-autocmd vimenter * colorscheme gruvbox
+colorscheme base16-atlas
 
 
 """"""""""""""""""""
@@ -30,7 +29,6 @@ set splitbelow
 set splitright
 
 " Use relative numbers in normal mode, absolute numbers in insert
-set relativenumber
 set number
 autocmd InsertEnter * :set number norelativenumber
 autocmd InsertLeave * :set relativenumber
@@ -44,3 +42,8 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 """"""""""""""""""""
 let g:buftabline_indicators=1
 let g:buftabline_separators=1
+
+""""""""""""""""""""
+" ALE
+""""""""""""""""""""
+let g:ale_python_auto_pipenv = 1

@@ -11,7 +11,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(docker docker-compose git npm pipenv python pip)
+plugins=(docker docker-compose npm pipenv python pip)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -38,6 +38,7 @@ alias bower="noglob bower"
 # Vim
 # alias vim="/usr/local/bin/vim"
 # alias vim="mvim -v"
+alias n="nvim"
 
 # tmux
 alias tnew="new-tmux-from-dir-name"
@@ -117,3 +118,6 @@ function docker-stop {
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
+
+# MF DOOM
+lolcat ~/dotfiles/banners/mfdoom.txt

@@ -16,6 +16,9 @@ Plug 'pangloss/vim-javascript'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'jparise/vim-graphql'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'dense-analysis/ale'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'leafgarland/typescript-vim'
 
 " Initialize plugin system
 call plug#end()
