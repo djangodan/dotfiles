@@ -68,6 +68,7 @@
   # push
   ps = push                         # push
   ph = push heroku master           # push heroku
+  pf = push --force-with-lease      # force push remote branch kindly 
 
   # rebase
   rc = rebase --continue            # continue rebase
